@@ -16,14 +16,22 @@
 <body>
 <p>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d<br/>d</p>
 <section id="slide-1" class="homeSlide">
-            <div class="bcg">
-                <div class="hsContainer">
-                    <div class="hsContent">
-                        <h2>Content</h2>
-                    </div>
-                </div>
+    <div class="bcg"
+        data-center="background-position: 50% 0px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-anchor-target="#slide-1"
+    >
+        <div class="hsContainer">
+            <div class="hsContent"
+                data-center="bottom: 200px; opacity: 1"
+                data-top="bottom: 1200px; opacity: 0"
+                data-anchor-target="#slide-1 h2"
+            >
+                <h2>Content</h2>
             </div>
-  </section>
+        </div>
+    </div>
+</section>
   <script type="text/javascript" src="js/skrollr.min.js"></script>
   <script type="text/javascript">
 var s = skrollr.init();
