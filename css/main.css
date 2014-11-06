@@ -78,10 +78,10 @@ body {
 /*Links*/
 a.link, a.visited {
   color:rgb(0,0,0);
-  transition-property:color, text-decoration;
-  -webkit-transition-property:color, text-decoration;
-  -moz-transition-property:color, text-decoration;
-  -o-transition-property:color, text-decoration;
+  transition-property:color;
+  -webkit-transition-property:color;
+  -moz-transition-property:color;
+  -o-transition-property:color;
   transition-duration:0.4s;
   -webkit-transition-duration:0.4s;
   -moz-transition-duration:0.4s;
