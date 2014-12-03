@@ -16,6 +16,5 @@ function rotateAnimation(el) {
 }
 window.onload = pre_loader;
 function pre_loader() {
-	javascript:document.getElementById('main').style.visibility='hidden';
-	javascript:document.getElementById('main').style.opacity=0;
+	document.getElementById('main').style.width=screen.width-"10"+"px";
 }
