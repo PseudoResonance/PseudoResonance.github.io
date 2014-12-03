@@ -13,3 +13,9 @@ function rotateAnimation(el) {
 		elem.style.transform = "rotate("+degrees+"deg)";
 	}
 	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+window.onload = pre_loader;
+function pre_loader() {
+	javascript:document.getElementById('main').style.visibility='hidden';
+	javascript:document.getElementById('main').style.opacity=0;
+}
