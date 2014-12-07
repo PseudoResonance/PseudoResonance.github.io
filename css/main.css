@@ -75,7 +75,8 @@ body {
   font-family:wf_segoe-ui_normal;
 }
 /*Links*/
-a.link, a.visited {
+
+a:link, a:visited {
   color:rgb(0,0,0);
   transition-property:color;
   -webkit-transition-property:color;
@@ -87,7 +88,7 @@ a.link, a.visited {
   -o-transition-duration:0.4s;
   text-decoration:underline;
 }
-a.active, a.hover {
+a:hover, a:active {
   color:rgb(0,100,255);
 }
 a.nav:link, a.nav:visited {
