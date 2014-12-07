@@ -77,7 +77,7 @@ body {
 /*Links*/
 
 a:link, a:visited {
-  color:rgb(0,0,0);
+  color:rgb(56,219,255);
   transition-property:color;
   -webkit-transition-property:color;
   -moz-transition-property:color;
@@ -89,7 +89,7 @@ a:link, a:visited {
   text-decoration:underline;
 }
 a:hover, a:active {
-  color:rgb(0,100,255);
+  color:rgb(210,60,240);
 }
 a.nav:link, a.nav:visited {
   color:rgb(0,0,0);
