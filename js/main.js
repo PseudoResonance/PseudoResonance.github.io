@@ -16,5 +16,5 @@ function rotateAnimation(el) {
 }
 window.onload = pre_loader;
 function pre_loader() {
-	document.getElementById('main').style.width=screen.width-"10"+"px";
+	document.getElementById('main').style.width=screen.width-"15"+"px";
 }
