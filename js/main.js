@@ -16,9 +16,9 @@ function rotateAnimation(el) {
 }
 window.onload = pre_loader;
 function pre_loader() {
-	document.getElementById('main').style.width=window.innerWidth-"12"+"px";
+	document.getElementById('main').style.width=window.innerWidth-"10"+"px";
 }
 
 window.onresize = function(event) {
-    document.getElementById('main').style.width=window.innerWidth-"12"+"px";
+    document.getElementById('main').style.width=window.innerWidth-"10"+"px";
 }
