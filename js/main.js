@@ -18,3 +18,7 @@ window.onload = pre_loader;
 function pre_loader() {
 	document.getElementById('main').style.width=screen.width-"15"+"px";
 }
+
+window.onresize = function(event) {
+    document.getElementById('main').style.width=screen.width-"15"+"px";
+}
