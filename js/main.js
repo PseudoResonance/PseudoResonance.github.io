@@ -19,10 +19,13 @@ function rotateAnimation(el) {
 window.onload = pre_loader;
 function pre_loader() {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
-			document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
-			document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
-			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
+		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+		if(window.innerWdith >= "500") {
+			document.getElementById('title').style.font-size=window.innerWidth-"40"+"px";
+		}
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
@@ -56,10 +59,13 @@ function pre_loader() {
 
 window.onresize = function(event) {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
-			document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
-			document.getElementById('titletransparent').style.width=window.innerWidth+"px";
-			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+		document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+		if(window.innerWdith >= "500") {
+			document.getElementById('title').style.font-size=window.innerWidth-"40"+"px";
+		}
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
