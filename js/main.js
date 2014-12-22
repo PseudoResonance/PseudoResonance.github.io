@@ -9,6 +9,8 @@ function rotateAnimation(el) {
 		elem.style.msTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("Opera")) {
 		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		document["arrow"].src = "";
 	} else {
 		elem.style.transform = "rotate("+degrees+"deg)";
 	}
@@ -16,9 +18,19 @@ function rotateAnimation(el) {
 }
 window.onload = pre_loader;
 function pre_loader() {
-	document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+	} else {
+		document.getElementById('main').style.width=window.innerWidth-"60"+"px";
+		document.getElementById('main').style.left="30px";
+	}
 }
 
 window.onresize = function(event) {
-    document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+	} else {
+		document.getElementById('main').style.width=window.innerWidth-"60"+"px";
+		document.getElementById('main').style.left="30px";
+	}
 }
