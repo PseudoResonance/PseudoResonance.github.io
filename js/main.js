@@ -21,8 +21,7 @@ function pre_loader() {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 	} else {
-		document.getElementById('main').style.width=window.innerWidth-"80"+"px";
-		document.getElementById('main').style.padding-right="60px";
+		document.getElementById('main').style.width=window.innerWidth-"150"+"px";
 		document.getElementById('main').style.left="60px";
 	}
 }
