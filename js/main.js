@@ -30,6 +30,11 @@ window.onresize = function(event) {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 	} else {
-		document.getElementById('main').style.width=window.innerWidth-"80"+"px";
+		if(window.innerWidth >= "800") {
+			document.getElementById('main').style.width=window.innerWidth-"150"+"px";
+		} else if(window.innerWidth <= "799") {
+			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+			document.getElementById('main').style.left="0px";
+		}
 	}
 }
