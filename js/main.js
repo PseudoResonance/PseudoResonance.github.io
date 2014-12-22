@@ -31,6 +31,6 @@ window.onresize = function(event) {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 	} else {
 		document.getElementById('main').style.width=window.innerWidth-"60"+"px";
-		document.getElementById('main').style.left="30px";
+		document.getElementById('main').style.left="60px";
 	}
 }
