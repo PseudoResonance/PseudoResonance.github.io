@@ -21,7 +21,7 @@ function pre_loader() {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 			document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
-			document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+			document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 	} else {
 		if(window.innerWidth >= "800") {
