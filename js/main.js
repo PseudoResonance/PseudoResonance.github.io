@@ -32,6 +32,7 @@ window.onresize = function(event) {
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('main').style.width=window.innerWidth-"150"+"px";
+			document.getElementById('main').style.left="60px";
 		} else if(window.innerWidth <= "799") {
 			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 			document.getElementById('main').style.left="0px";
