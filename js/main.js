@@ -22,7 +22,7 @@ function pre_loader() {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 	} else {
 		document.getElementById('main').style.width=window.innerWidth-"80"+"px";
-		document.getElementById('main').style.right="60px";
+		document.getElementById('main').style.padding-right="60px";
 		document.getElementById('main').style.left="60px";
 	}
 }
