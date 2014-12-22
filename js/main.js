@@ -24,7 +24,7 @@ function pre_loader() {
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 		if(window.innerWdith >= "500") {
-			document.getElementById('title').style.font-size=window.innerWidth-"40"+"px";
+			document.getElementById('title').style.font-size=window.innerWidth-"200"+"px";
 		}
 	} else {
 		if(window.innerWidth >= "800") {
@@ -64,7 +64,7 @@ window.onresize = function(event) {
 		document.getElementById('titletransparent').style.width=window.innerWidth+"px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 		if(window.innerWdith >= "500") {
-			document.getElementById('title').style.font-size=window.innerWidth-"40"+"px";
+			document.getElementById('title').style.font-size=window.innerWidth-"200"+"px";
 		}
 	} else {
 		if(window.innerWidth >= "800") {
