@@ -9,7 +9,7 @@ function rotateAnimation(el) {
 		elem.style.msTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("Opera")) {
 		elem.style.OTransform = "rotate("+degrees+"deg)";
-	} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	} else if(window.innerWdith <= "500") {
 		document["arrow"].src = "";
 	} else {
 		elem.style.transform = "rotate("+degrees+"deg)";
@@ -18,14 +18,12 @@ function rotateAnimation(el) {
 }
 window.onload = pre_loader;
 function pre_loader() {
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	if(window.innerWdith <= "500") {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		if(window.innerWdith <= "500") {
-			document.getElementById('title').style.fontSize="50";
-		}
+		document.getElementById('title').style.fontSize="50";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
@@ -58,14 +56,12 @@ function pre_loader() {
 }
 
 window.onresize = function(event) {
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	if(window.innerWdith <= "500") {
 		document.getElementById('main').style.width=window.innerWidth-"30"+"px";
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		if(window.innerWdith <= "500") {
-			document.getElementById('title').style.fontSize="50%";
-		}
+		document.getElementById('title').style.fontSize="50%";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
