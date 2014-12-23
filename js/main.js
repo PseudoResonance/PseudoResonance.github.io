@@ -24,7 +24,7 @@ function pre_loader() {
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 		if(window.innerWdith <= "500") {
-			document.getElementById('title').style.fontSize="50%";
+			document.getElementById('title').style.fontSize="50";
 		}
 	} else {
 		if(window.innerWidth >= "800") {
