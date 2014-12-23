@@ -9,8 +9,6 @@ function rotateAnimation(el) {
 		elem.style.msTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("Opera")) {
 		elem.style.OTransform = "rotate("+degrees+"deg)";
-	} else if(window.innerWdith <= "500") {
-		document["arrow"].src = "";
 	} else {
 		elem.style.transform = "rotate("+degrees+"deg)";
 	}
@@ -23,7 +21,7 @@ function pre_loader() {
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		document.getElementById('title').style.fontSize="50";
+		document.getElementById('title').style.fontSize="50%";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
