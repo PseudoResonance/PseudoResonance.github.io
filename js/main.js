@@ -21,7 +21,7 @@ function pre_loader() {
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		document.getElementById('title').style.fontSize="50%";
+		document.getElementById("title").style.fontSize="1px";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
@@ -59,7 +59,7 @@ window.onresize = function(event) {
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		document.getElementById('title').style.fontSize="50%";
+		document.getElementById("title").style.fontSize="1px";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
