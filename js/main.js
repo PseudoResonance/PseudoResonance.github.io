@@ -36,6 +36,7 @@ function pre_loader() {
 			document.getElementById('titletransparent').style.left="60px";
 			document.getElementById('title').style.width=window.innerWidth-"220"+"px";
 			document.getElementById('title').style.left="60px";
+			document.getElementById("title").style.fontSize="50px";
 		} else if(window.innerWidth <= "799") {
 			document.getElementById('title').style.top="0px"
 			document.getElementById('titletransparent').style.top="80px"
@@ -49,6 +50,7 @@ function pre_loader() {
 			document.getElementById('titletransparent').style.left="0px";
 			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 			document.getElementById('title').style.left="0px";
+			document.getElementById("title").style.fontSize="1px";
 		}
 	}
 }
@@ -74,6 +76,7 @@ window.onresize = function(event) {
 			document.getElementById('titletransparent').style.left="60px";
 			document.getElementById('title').style.width=window.innerWidth-"220"+"px";
 			document.getElementById('title').style.left="60px";
+			document.getElementById("title").style.fontSize="50px";
 		} else if(window.innerWidth <= "799") {
 			document.getElementById('title').style.top="0px"
 			document.getElementById('titletransparent').style.top="80px"
@@ -87,6 +90,7 @@ window.onresize = function(event) {
 			document.getElementById('titletransparent').style.left="0px";
 			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 			document.getElementById('title').style.left="0px";
+			document.getElementById("title").style.fontSize="1px";
 		}
 	}
 }
