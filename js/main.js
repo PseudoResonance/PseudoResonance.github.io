@@ -31,6 +31,7 @@ function pre_loader() {
 		document.getElementById('title').style.left="60px";
 		document.getElementById('title').style.fontSize="50px";
 		document.getElementById('navbar').style.fontSize="30px";
+		document.getElementById('arrow').src="http://wolfleader116.github.io/images/arrow.png";
 	} else if(window.innerWidth <= "799") {
 		if(window.innerWidth <= "499") {
 			document.getElementById('title').style.top="0px"
@@ -47,6 +48,7 @@ function pre_loader() {
 			document.getElementById('title').style.left="0px";
 			document.getElementById('title').style.fontSize="30px";
 			document.getElementById('navbar').style.fontSize="10px";
+			document.getElementById('arrow').src="";
 		} else {
 			document.getElementById('title').style.top="0px"
 			document.getElementById('titletransparent').style.top="80px"
@@ -62,6 +64,7 @@ function pre_loader() {
 			document.getElementById('title').style.left="0px";
 			document.getElementById('title').style.fontSize="40px";
 			document.getElementById('navbar').style.fontSize="20px";
+			document.getElementById('arrow').src="";
 		}
 	}
 }
@@ -82,6 +85,7 @@ window.onresize = function(event) {
 		document.getElementById('title').style.left="60px";
 		document.getElementById('title').style.fontSize="50px";
 		document.getElementById('navbar').style.fontSize="30px";
+		document.getElementById('arrow').src="http://wolfleader116.github.io/images/arrow.png";
 	} else if(window.innerWidth <= "799") {
 		if(window.innerWidth <= "499") {
 			document.getElementById('title').style.top="0px"
@@ -98,6 +102,7 @@ window.onresize = function(event) {
 			document.getElementById('title').style.left="0px";
 			document.getElementById('title').style.fontSize="30px";
 			document.getElementById('navbar').style.fontSize="10px";
+			document.getElementById('arrow').src="";
 		} else {
 			document.getElementById('title').style.top="0px"
 			document.getElementById('titletransparent').style.top="80px"
@@ -113,6 +118,7 @@ window.onresize = function(event) {
 			document.getElementById('title').style.left="0px";
 			document.getElementById('title').style.fontSize="40px";
 			document.getElementById('navbar').style.fontSize="20px";
+			document.getElementById('arrow').src="";
 		}
 	}
 }
