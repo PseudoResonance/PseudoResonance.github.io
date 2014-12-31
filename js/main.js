@@ -21,7 +21,7 @@ function pre_loader() {
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"30px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		document.getElementById("title").style.fontSize="1px";
+		document.getElementById("title").style.fontSize=window.innerWidth-"100"+"px";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
@@ -50,7 +50,7 @@ function pre_loader() {
 			document.getElementById('titletransparent').style.left="0px";
 			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 			document.getElementById('title').style.left="0px";
-			document.getElementById("title").style.fontSize="1px";
+			document.getElementById("title").style.fontSize=window.innerWidth-"100"+"px";
 		}
 	}
 }
@@ -61,7 +61,7 @@ window.onresize = function(event) {
 		document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
 		document.getElementById('titletransparent').style.width=window.innerWidth+"px";
 		document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-		document.getElementById("title").style.fontSize="1px";
+		document.getElementById("title").style.fontSize=window.innerWidth-"100"+"px";
 	} else {
 		if(window.innerWidth >= "800") {
 			document.getElementById('title').style.top="30px"
@@ -90,7 +90,7 @@ window.onresize = function(event) {
 			document.getElementById('titletransparent').style.left="0px";
 			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
 			document.getElementById('title').style.left="0px";
-			document.getElementById("title").style.fontSize="1px";
+			document.getElementById("title").style.fontSize=window.innerWidth-"100"+"px";
 		}
 	}
 }
