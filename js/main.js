@@ -37,22 +37,36 @@ function pre_loader() {
 			document.getElementById('title').style.width=window.innerWidth-"220"+"px";
 			document.getElementById('title').style.left="60px";
 			document.getElementById("title").style.fontSize="50px";
-		} else if(window.innerWidth <= "799" && window.innerWidth >= "500") {
-			document.getElementById('title').style.top="0px"
-			document.getElementById('titletransparent').style.top="80px"
-			document.getElementById('navbar').style.top="90px"
-			document.getElementById('main').style.top="130px"
-			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
-			document.getElementById('main').style.left="0px";
-			document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
-			document.getElementById('navbar').style.left="0px";
-			document.getElementById('titletransparent').style.width=window.innerWidth+"px";
-			document.getElementById('titletransparent').style.left="0px";
-			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-			document.getElementById('title').style.left="0px";
-			document.getElementById("title").style.fontSize="40px";
-		} else if(window.innerWidth <= "499" && window.innerWidth >= "200") {
-			document.getElementById('title').style.fontSize="30px";
+		} else if(window.innerWidth <= "799") {
+			if(window.innerWidth <= "499") {
+				document.getElementById('title').style.top="0px"
+				document.getElementById('titletransparent').style.top="80px"
+				document.getElementById('navbar').style.top="90px"
+				document.getElementById('main').style.top="130px"
+				document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+				document.getElementById('main').style.left="0px";
+				document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+				document.getElementById('navbar').style.left="0px";
+				document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+				document.getElementById('titletransparent').style.left="0px";
+				document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+				document.getElementById('title').style.left="0px";
+				document.getElementById('title').style.fontSize="30px";
+			} else {
+				document.getElementById('title').style.top="0px"
+				document.getElementById('titletransparent').style.top="80px"
+				document.getElementById('navbar').style.top="90px"
+				document.getElementById('main').style.top="130px"
+				document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+				document.getElementById('main').style.left="0px";
+				document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+				document.getElementById('navbar').style.left="0px";
+				document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+				document.getElementById('titletransparent').style.left="0px";
+				document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+				document.getElementById('title').style.left="0px";
+				document.getElementById("title").style.fontSize="40px";
+			}
 		}
 	}
 }
@@ -79,22 +93,36 @@ window.onresize = function(event) {
 			document.getElementById('title').style.width=window.innerWidth-"220"+"px";
 			document.getElementById('title').style.left="60px";
 			document.getElementById("title").style.fontSize="50px";
-		} else if(window.innerWidth <= "799" && window.innerWidth >= "500") {
-			document.getElementById('title').style.top="0px"
-			document.getElementById('titletransparent').style.top="80px"
-			document.getElementById('navbar').style.top="90px"
-			document.getElementById('main').style.top="130px"
-			document.getElementById('main').style.width=window.innerWidth-"30"+"px";
-			document.getElementById('main').style.left="0px";
-			document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
-			document.getElementById('navbar').style.left="0px";
-			document.getElementById('titletransparent').style.width=window.innerWidth+"px";
-			document.getElementById('titletransparent').style.left="0px";
-			document.getElementById('title').style.width=window.innerWidth-"100"+"px";
-			document.getElementById('title').style.left="0px";
-			document.getElementById("title").style.fontSize=window.innerWidth-"100"+"px";
-		} else if(window.innerWidth <= "499" && window.innerWidth >= "200") {
-			document.getElementById('title').style.fontSize="30px";
+		} else if(window.innerWidth <= "799") {
+			if(window.innerWidth <= "499") {
+				document.getElementById('title').style.top="0px"
+				document.getElementById('titletransparent').style.top="80px"
+				document.getElementById('navbar').style.top="90px"
+				document.getElementById('main').style.top="130px"
+				document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+				document.getElementById('main').style.left="0px";
+				document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+				document.getElementById('navbar').style.left="0px";
+				document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+				document.getElementById('titletransparent').style.left="0px";
+				document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+				document.getElementById('title').style.left="0px";
+				document.getElementById('title').style.fontSize="30px";
+			} else {
+				document.getElementById('title').style.top="0px"
+				document.getElementById('titletransparent').style.top="80px"
+				document.getElementById('navbar').style.top="90px"
+				document.getElementById('main').style.top="130px"
+				document.getElementById('main').style.width=window.innerWidth-"30"+"px";
+				document.getElementById('main').style.left="0px";
+				document.getElementById('navbar').style.width=window.innerWidth-"80"+"px";
+				document.getElementById('navbar').style.left="0px";
+				document.getElementById('titletransparent').style.width=window.innerWidth+"px";
+				document.getElementById('titletransparent').style.left="0px";
+				document.getElementById('title').style.width=window.innerWidth-"100"+"px";
+				document.getElementById('title').style.left="0px";
+				document.getElementById("title").style.fontSize="40px";
+			}
 		}
 	}
 }
