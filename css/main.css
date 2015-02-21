@@ -120,6 +120,29 @@ color:#fafafa;
 background:#646464
 }
 
+button,input {
+border:1px solid #bebebe;
+transition-property:background-color;
+-webkit-transition-property:background-color;
+-moz-transition-property:background-color;
+-o-transition-property:background-color;
+transition-duration:.4s;
+-webkit-transition-duration:.4s;
+-moz-transition-duration:.4s;
+-o-transition-duration:.4s;
+background:#e6e6e6
+}
+
+button:hover,input:hover {
+border:1px solid #a0a0a0;
+background:#c8c8c8
+}
+
+button:active,input:active {
+border:1px solid #8c8c8c;
+background:#b4b4b4
+}
+
 a:link,a:visited {
 color:#0f87d2;
 transition-property:color;
