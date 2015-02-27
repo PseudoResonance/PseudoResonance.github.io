@@ -65,7 +65,7 @@ function pre_loader() {
 		document.getElementById('footer').style.width=window.innerWidth-"120"+"px";
 		document.getElementById('main').style.fontSize="130%";
 		document.getElementById('footer').style.fontSize="90%";
-		document.getElementById('footer').style.height="60px";
+		document.getElementById('footer').style.height="70px";
 	} else if(window.innerWidth <= "799") {
 		if(window.innerWidth <= "499") {
 			document.getElementById('title').style.top="0px"
@@ -195,7 +195,7 @@ window.onresize = function(event) {
 		document.getElementById('footer').style.width=window.innerWidth-"120"+"px";
 		document.getElementById('main').style.fontSize="130%";
 		document.getElementById('footer').style.fontSize="90%";
-		document.getElementById('footer').style.height="60px";
+		document.getElementById('footer').style.height="70px";
 	} else if(window.innerWidth <= "799") {
 		if(window.innerWidth <= "499") {
 			document.getElementById('title').style.top="0px"
