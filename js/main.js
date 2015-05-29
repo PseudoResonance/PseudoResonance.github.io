@@ -27,6 +27,7 @@ function pre_loader() {
 		document.getElementById('navbar').style.height="70px";
 		document.getElementById('navbar').style.paddingLeft="0px";
 		document.getElementById('title').style.paddingLeft="10px";
+		document.getElementById('main').style.fontSize="90%";
 		var t = document.getElementById('main').style.getPropertyValue('top');
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
@@ -34,7 +35,6 @@ function pre_loader() {
 		document.getElementById('footer').style.top=a+"px";
 		document.getElementById('footer').style.left="0px";
 		document.getElementById('footer').style.width="100%"
-		document.getElementById('main').style.fontSize="90%";
 		document.getElementById('footer').style.fontSize="70%";
 		document.getElementById('footer').style.height="85px";
 	} else if(window.innerWidth >= "800") {
@@ -56,6 +56,7 @@ function pre_loader() {
 		document.getElementById('navbar').style.height="40px";
 		document.getElementById('navbar').style.paddingLeft="80px";
 		document.getElementById('title').style.paddingLeft="100px";
+		document.getElementById('main').style.fontSize="130%";
 		var t = document.getElementById('main').style.getPropertyValue('top');
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
@@ -63,7 +64,6 @@ function pre_loader() {
 		document.getElementById('footer').style.top=a+"px";
 		document.getElementById('footer').style.left="60px";
 		document.getElementById('footer').style.width=window.innerWidth-"120"+"px";
-		document.getElementById('main').style.fontSize="130%";
 		document.getElementById('footer').style.fontSize="90%";
 		document.getElementById('footer').style.height="75px";
 	} else if(window.innerWidth <= "799") {
@@ -86,6 +86,7 @@ function pre_loader() {
 			document.getElementById('navbar').style.height="20px";
 			document.getElementById('navbar').style.paddingLeft="0px";
 			document.getElementById('title').style.paddingLeft="10px";
+			document.getElementById('main').style.fontSize="90%";
 			var t = document.getElementById('main').style.getPropertyValue('top');
 			var h = $('#main').height();
 			t = t.replace(/[px]/g, "");
@@ -93,7 +94,6 @@ function pre_loader() {
 			document.getElementById('footer').style.top=a+"px";
 			document.getElementById('footer').style.left="0px";
 			document.getElementById('footer').style.width="100%"
-			document.getElementById('main').style.fontSize="90%";
 			document.getElementById('footer').style.fontSize="70%";
 			document.getElementById('footer').style.height="85px";
 		} else {
@@ -115,6 +115,7 @@ function pre_loader() {
 			document.getElementById('navbar').style.height="30px";
 			document.getElementById('navbar').style.paddingLeft="0px";
 			document.getElementById('title').style.paddingLeft="10px";
+			document.getElementById('main').style.fontSize="110%";
 			var t = document.getElementById('main').style.getPropertyValue('top');
 			var h = $('#main').height();
 			t = t.replace(/[px]/g, "");
@@ -122,7 +123,6 @@ function pre_loader() {
 			document.getElementById('footer').style.top=a+"px";
 			document.getElementById('footer').style.left="0px";
 			document.getElementById('footer').style.width="100%"
-			document.getElementById('main').style.fontSize="110%";
 			document.getElementById('footer').style.fontSize="80%";
 			document.getElementById('footer').style.height="70px";
 		}
@@ -157,6 +157,7 @@ window.onresize = function(event) {
 		document.getElementById('navbar').style.height="70px";
 		document.getElementById('navbar').style.paddingLeft="0px";
 		document.getElementById('title').style.paddingLeft="10px";
+		document.getElementById('main').style.fontSize="90%";
 		var t = document.getElementById('main').style.getPropertyValue('top');
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
@@ -164,7 +165,6 @@ window.onresize = function(event) {
 		document.getElementById('footer').style.top=a+"px";
 		document.getElementById('footer').style.left="0px";
 		document.getElementById('footer').style.width="100%"
-		document.getElementById('main').style.fontSize="90%";
 		document.getElementById('footer').style.fontSize="70%";
 		document.getElementById('footer').style.height="85px";
 	} else if(window.innerWidth >= "800") {
@@ -186,6 +186,7 @@ window.onresize = function(event) {
 		document.getElementById('navbar').style.height="40px";
 		document.getElementById('navbar').style.paddingLeft="80px";
 		document.getElementById('title').style.paddingLeft="100px";
+		document.getElementById('main').style.fontSize="130%";
 		var t = document.getElementById('main').style.getPropertyValue('top');
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
@@ -193,7 +194,6 @@ window.onresize = function(event) {
 		document.getElementById('footer').style.top=a+"px";
 		document.getElementById('footer').style.left="60px";
 		document.getElementById('footer').style.width=window.innerWidth-"120"+"px";
-		document.getElementById('main').style.fontSize="130%";
 		document.getElementById('footer').style.fontSize="90%";
 		document.getElementById('footer').style.height="75px";
 	} else if(window.innerWidth <= "799") {
@@ -216,6 +216,7 @@ window.onresize = function(event) {
 			document.getElementById('navbar').style.height="20px";
 			document.getElementById('navbar').style.paddingLeft="0px";
 			document.getElementById('title').style.paddingLeft="10px";
+			document.getElementById('main').style.fontSize="90%";
 			var t = document.getElementById('main').style.getPropertyValue('top');
 			var h = $('#main').height();
 			t = t.replace(/[px]/g, "");
@@ -223,7 +224,6 @@ window.onresize = function(event) {
 			document.getElementById('footer').style.top=a+"px";
 			document.getElementById('footer').style.left="0px";
 			document.getElementById('footer').style.width="100%"
-			document.getElementById('main').style.fontSize="90%";
 			document.getElementById('footer').style.height="85px";
 		} else {
 			document.getElementById('title').style.top="0px"
@@ -244,6 +244,7 @@ window.onresize = function(event) {
 			document.getElementById('navbar').style.height="30px";
 			document.getElementById('navbar').style.paddingLeft="0px";
 			document.getElementById('title').style.paddingLeft="10px";
+			document.getElementById('main').style.fontSize="110%";
 			var t = document.getElementById('main').style.getPropertyValue('top');
 			var h = $('#main').height();
 			t = t.replace(/[px]/g, "");
@@ -251,7 +252,6 @@ window.onresize = function(event) {
 			document.getElementById('footer').style.top=a+"px";
 			document.getElementById('footer').style.left="0px";
 			document.getElementById('footer').style.width="100%"
-			document.getElementById('main').style.fontSize="110%";
 			document.getElementById('footer').style.fontSize="80%";
 			document.getElementById('footer').style.height="70px";
 		}
