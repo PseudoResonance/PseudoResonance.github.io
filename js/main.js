@@ -32,7 +32,7 @@ function pre_loader() {
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
 		var a = +t + +h;
-		document.getElementById('footer').style.top=a+"px";
+		document.getElementById('footer').style.top=t+"px";
 		document.getElementById('footer').style.left="0px";
 		document.getElementById('footer').style.width="100%"
 		document.getElementById('footer').style.fontSize="70%";
@@ -162,7 +162,7 @@ window.onresize = function(event) {
 		var h = $('#main').height();
 		t = t.replace(/[px]/g, "");
 		var a = +t + +h;
-		document.getElementById('footer').style.top=a+"px";
+		document.getElementById('footer').style.top=t+"px";
 		document.getElementById('footer').style.left="0px";
 		document.getElementById('footer').style.width="100%"
 		document.getElementById('footer').style.fontSize="70%";
