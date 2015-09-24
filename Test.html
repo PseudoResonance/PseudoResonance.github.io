@@ -1,0 +1,52 @@
+<!DOCUMENT html>
+<html>
+<head>
+  <title>Test | WolfLeader116</title>
+</head>
+<body>
+  <div id="form">
+    <form action="" id="distanceform" onsubmit="return false;">
+      <fieldset>
+        <legend>Find the Distance Between Any 2 Points</legend>
+        <label>Point X<sub>1</sub></label>
+        <input type="number"  name="x1" onclick="findDistance()" />
+        <label>Point Y<sub>1</sub></label>
+        <input type="number"  name="y1" onclick="findDistance()" />
+        <label>Point X<sub>2</sub></label>
+        <input type="number"  name="x2" onclick="findDistance()" />
+        <label>Point Y<sub>2</sub></label>
+        <input type="number"  name="y2" onclick="findDistance()" />
+        <div id="answer"></div>
+      </fieldset>
+    </form>
+    <script>
+      function findDistance() {
+        var form = document.forms["distanceform"];
+        var x1 = form.elements["x1"];
+        var x1v = 0;
+        if (x1.value != "") {
+          x1v = parseInt(x1.value);
+        }
+        var y1 = form.elements["x1"];
+        var y1v = 0;
+        if (y1.value != "") {
+          y1v = parseInt(x1.value);
+        }
+        var x2 = form.elements["x1"];
+        var x2v = 0;
+        if (x2.value != "") {
+          x2v = parseInt(x1.value);
+        }
+        var y2 = form.elements["x1"];
+        var y2v = 0;
+        if (y2.value != "") {
+          y2v = parseInt(x1.value);
+        }
+        var answer = 0;
+        answer = Math.sqrt(((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2)));
+        document.getElementById('answer').innerHTML = "Answer: " + answer;
+      }
+    </script>
+  </div>
+</body>
+</html>
