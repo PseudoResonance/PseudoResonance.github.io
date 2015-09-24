@@ -1,4 +1,4 @@
-<!DOCUMENT html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Test | WolfLeader116</title>
@@ -43,7 +43,9 @@
           y2v = parseInt(x1.value);
         }
         var answer = 0;
-        answer = Math.sqrt(((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2)));
+        var xdist = (x1-x2);
+        var ydist = (y1-y2);
+        answer = Math.sqrt((xdist * xdist) + (ydist * ydist));
         document.getElementById('answer').innerHTML = "Answer: " + answer;
       }
     </script>
