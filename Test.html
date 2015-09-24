@@ -91,14 +91,14 @@
         var xdist = 0;
         var ydist = 0;
         if (x1 > x2) {
-          xdist = ((x1-x2)/2);
+          xdist = (x2-((x1-x2)/2));
         } else {
-          xdist = ((x2-x1)/2);
+          xdist = (x2-((x2-x1)/2));
         }
         if (y1 > y2) {
-          ydist = ((y1-y2)/2);
+          ydist = (y2-((y1-y2)/2));
         } else {
-          ydist = ((y2-y1)/2);
+          ydist = (y2-((y2-y1)/2));
         }
         var answer = 0;
         answer = "(" + xdist + "," + ydist + ")";
