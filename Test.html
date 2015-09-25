@@ -88,8 +88,18 @@
         if (y2.value != "") {
           y2v = parseInt(y2);
         }
-        var xdist = (x1+x2)/2;
-        var ydist = (y1+y2)/2;
+        var xdist = 0;
+        var ydist = 0;
+        if (x1 > x2) {
+          xdist = (x1-((x1-x2)/2));
+        } else {
+          xdist = (x2-((x2-x1)/2));
+        }
+        if (y1 > y2) {
+          ydist = (y1-((y1-y2)/2));
+        } else {
+          ydist = (y2-((y2-y1)/2));
+        }
         var answer = 0;
         answer = "(" + xdist + "," + ydist + ")";
         document.getElementById('answer2').innerHTML = "Answer: " + answer;
