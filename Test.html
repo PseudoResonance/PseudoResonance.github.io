@@ -169,5 +169,71 @@
       }
     </script>
   </div>
+  <div id="form4">
+    <form action="" id="triangleform" onsubmit="return false;">
+      <fieldset>
+        <legend>Find the Perimeter of a Triangle with it's 3 Points</legend>
+        <label>Point X<sub>1</sub></label>
+        <input type="number"  name="x1" onclick="findTriangle()" />
+        <label>Point Y<sub>1</sub></label>
+        <input type="number"  name="y1" onclick="findTriangle()" />
+        <label>Point X<sub>2</sub></label>
+        <input type="number"  name="x2" onclick="findTriangle()" />
+        <label>Point Y<sub>2</sub></label>
+        <input type="number"  name="y2" onclick="findTriangle()" />
+        <label>Point X<sub>3</sub></label>
+        <input type="number"  name="x3" onclick="findTriangle()" />
+        <label>Point Y<sub>3</sub></label>
+        <input type="number"  name="y3" onclick="findTriangle()" />
+        <div id="answer4"></div>
+      </fieldset>
+    </form>
+    <script>
+      function findTriangle() {
+        var x1 = document.forms["triangleform"].elements["x1"].value;
+        var x1v = 0;
+        if (x1.value != "") {
+          x1v = parseInt(x1);
+        }
+        var y1 = document.forms["triangleform"].elements["y1"].value;
+        var y1v = 0;
+        if (y1.value != "") {
+          y1v = parseInt(y1);
+        }
+        var x2 = document.forms["triangleform"].elements["x2"].value;
+        var x2v = 0;
+        if (x2.value != "") {
+          x2v = parseInt(x2);
+        }
+        var y2 = document.forms["triangleform"].elements["y2"].value;
+        var y2v = 0;
+        if (y2.value != "") {
+          y2v = parseInt(y2);
+        }
+        var x3 = document.forms["triangleform"].elements["x3"].value;
+        var x3v = 0;
+        if (x3.value != "") {
+          x3v = parseInt(x3);
+        }
+        var y3 = document.forms["triangleform"].elements["y3"].value;
+        var y3v = 0;
+        if (y3.value != "") {
+          y3v = parseInt(y3);
+        }
+        var answer = 0;
+        var xdist12 = ((x1)-(x2));
+        var ydist12 = ((y1)-(y2));
+        answer12 = Math.sqrt((xdist12 * xdist12) + (ydist12 * ydist12));
+        var xdist13 = ((x1)-(x3));
+        var ydist13 = ((y1)-(y3));
+        answer13 = Math.sqrt((xdist13 * xdist13) + (ydist13 * ydist13));
+        var xdist23 = ((x2)-(x3));
+        var ydist23 = ((y2)-(y3));
+        answer23 = Math.sqrt((xdist23 * xdist23) + (ydist23 * ydist23));
+        answer = answer12 + answer13 + answer23;
+        document.getElementById('answer4').innerHTML = "Answer: " + answer;
+      }
+    </script>
+  </div>
 </body>
 </html>
