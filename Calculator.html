@@ -263,7 +263,10 @@
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
         var answer = code.eval(scope);
         if (answer == "Infinity") {
-          answer = "Undefined/Overflow";
+          answer = "Error;
+        }
+        if (answer == "undefined") {
+          answer = "Undefined";
         }
         document.getElementById('answer5').innerHTML = "Y: " + answer;
       }
