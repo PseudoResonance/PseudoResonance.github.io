@@ -237,5 +237,34 @@
       }
     </script>
   </div>
+  <br>
+  <br>
+  <div id="form5">
+    <form action="" id="equationform" onsubmit="return false;">
+      <fieldset>
+        <legend>Find the value of Y depending on value of X in specified equation.</legend>
+        <label>Equation</label>
+        <input name="equation" onclick="parseEquation()" />
+        <label>X</label>
+        <input type="number"  name="x" onclick="findY()" />
+        <div id="answer5">Y: 0</div>
+      </fieldset>
+    </form>
+    <script>
+      function parse() {
+        var equation = math.parse(document.forms["equationform"].elements["equation"].value, scope);
+        var code = equation.compile();
+        var xval = document.forms["equationform"].elements["x"].value;
+        if (xval == "") {
+          xval = 0;
+        }
+        var scope = {
+          x: xval
+        };
+        code.eval(scope);
+        document.getElementById('answer5').innerHTML = "Y: " + answer;
+      }
+    </script>
+  </div>
 </body>
 </html>
