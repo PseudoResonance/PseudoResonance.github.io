@@ -261,8 +261,7 @@
           x: xval
         };
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
-        code.eval(scope);
-        document.getElementById('answer5').innerHTML = "Y: " + answer;
+        document.getElementById('answer5').innerHTML = "Y: " + code.eval(scope);
       }
     </script>
   </div>
