@@ -261,7 +261,11 @@
           x: xval
         };
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
-        document.getElementById('answer5').innerHTML = "Y: " + code.eval(scope);
+        var answer = code.eval(scope);
+        if (answer == "Infinity") {
+          answer = "Undefined/Overflow";
+        }
+        document.getElementById('answer5').innerHTML = "Y: " + answer;
       }
     </script>
   </div>
