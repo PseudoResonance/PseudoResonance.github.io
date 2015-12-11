@@ -248,7 +248,7 @@
         <input name="equation" onclick="parse()" />
         <label>X</label>
         <input type="number"  name="x" onclick="parse()" />
-        <div id="answer5">Y: 0</div>
+        <div id="answer5">Y: Undefined</div>
       </fieldset>
     </form>
     <script>
@@ -264,8 +264,7 @@
         var answer = code.eval(scope);
         if (answer == "Infinity") {
           answer = "Error;
-        }
-        if (answer == "undefined") {
+        } else if (answer == "undefined") {
           answer = "Undefined";
         }
         document.getElementById('answer5').innerHTML = "Y: " + answer;
