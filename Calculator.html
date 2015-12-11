@@ -253,9 +253,6 @@
     </form>
     <script>
       function parse() {
-        var stringequation = String(document.forms["equationform"].elements["equation"].value);
-        var equation = math.parse(stringequation, scope);
-        var code = equation.compile();
         var xval = document.forms["equationform"].elements["x"].value;
         if (xval == "") {
           xval = 0;
@@ -263,6 +260,7 @@
         var scope = {
           x: xval
         };
+        var equation = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
         code.eval(scope);
         document.getElementById('answer5').innerHTML = "Y: " + answer;
       }
