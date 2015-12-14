@@ -306,10 +306,7 @@
         if (y2val == "") {
           y2val = 0;
         }
-        if (x1val == x2val) {
-          document.getElementById('answer6').innerHTML = "Equation: None";
-          return;
-        } else if (y1val == y2val) {
+        if (x1val == x2val && y1val == y2val) {
           document.getElementById('answer6').innerHTML = "Equation: None";
           return;
         }
