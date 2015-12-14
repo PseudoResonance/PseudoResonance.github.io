@@ -262,12 +262,83 @@
         };
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
         var answer = code.eval(scope);
-        if (answer == "Infinity") {
+        if (answer === "Infinity") {
           answer = "Error";
-        } else if (answer == "undefined") {
+        } else if (answer === "undefined") {
           answer = "Undefined";
         }
         document.getElementById('answer5').innerHTML = "Y: " + answer;
+      }
+    </script>
+  </div>
+  <br>
+  <br>
+  <div id="form6">
+    <form action="" id="lineequationform" onsubmit="return false;">
+      <fieldset>
+        <legend>Find the equation of a line through two points.</legend>
+        <label>X<sub>1</sub></label>
+        <input name="x1" onclick="find()" />
+        <label>Y<sub>1</sub></label>
+        <input name="y1" onclick="find()" />
+        <label>X<sub>2</sub></label>
+        <input name="x2" onclick="find()" />
+        <label>Y<sub>2</sub></label>
+        <input name="y2" onclick="find()" />
+        <div id="answer6">Equation: None</div>
+      </fieldset>
+    </form>
+    <script>
+      function find() {
+        var x1val = document.forms["lineequationform"].elements["x1"].value;
+        if (x1val == "") {
+          x1val = 0;
+        }
+        var y1val = document.forms["lineequationform"].elements["y1"].value;
+        if (y1val == "") {
+          y1val = 0;
+        }
+        var x2val = document.forms["lineequationform"].elements["x2"].value;
+        if (x2val == "") {
+          x2val = 0;
+        }
+        var y2val = document.forms["lineequationform"].elements["y2"].value;
+        if (y2val == "") {
+          y2val = 0;
+        }
+        if (x1val == x2val) {
+          document.getElementById('answer6').innerHTML = "Equation: None";
+          return;
+        } else if (y1val == y2val) {
+          document.getElementById('answer6').innerHTML = "Equation: None";
+          return;
+        }
+        var y = y1val-y2val;
+        var x = x1val-x2val;
+        var slope = 0;
+        if (x == 0) {
+          slope = "Undefined";
+        } else if (y == 0) {
+          slope = "None";
+        } else {
+          slope = y/x;
+        }
+        var answer = "None";
+        if (slope === "Undefined") {
+          answer = "x=" + x1val;
+        } else if (slope === "None") {
+          answer = "y=" + y1val;
+        } else {
+          var yint = y1val - (slope*x1val);
+          if (yint < 0) {
+            answer = "y=" + slope + "x" + yint;
+          } else if (yint > 0) {
+            answer = "y=" + slope + "x+" + yint;
+          } else {
+            answer = "y=" + slope + "x";
+          }
+        }
+        document.getElementById('answer6').innerHTML = "Equation: " + answer;
       }
     </script>
   </div>
