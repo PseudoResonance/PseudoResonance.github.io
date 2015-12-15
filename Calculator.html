@@ -289,6 +289,10 @@
       </fieldset>
     </form>
     <script>
+    function decimalPlaces(num) {
+      var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {return 0;}
+      return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
       function find() {
         var x1val = document.forms["lineequationform"].elements["x1"].value;
         if (x1val == "") {
@@ -319,6 +323,9 @@
           slope = "None";
         } else {
           slope = y/x;
+          if (decimalPlaces(slope) > 2) {
+            slope = y + "/" + x;
+          }
         }
         var answer = "None";
         if (slope === "Undefined") {
@@ -326,13 +333,49 @@
         } else if (slope === "None") {
           answer = "y=" + y1val;
         } else {
-          var yint = y1val - (slope*x1val);
-          if (yint < 0) {
-            answer = "y=" + slope + "x" + yint;
-          } else if (yint > 0) {
-            answer = "y=" + slope + "x+" + yint;
+          if (decimalPlaces(y/x) > 2) {
+            var slopea = y/x;
+            var yint = y1val - (slopea*x1val);
+            if (decimalPlaces(yint) > 2) {
+              var yintt = y*x1val;
+              var yintb = x;
+              if (yint < 0) {
+                answer = "y=" + slope + "x-" + yintt + "/" + yintb;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+              } else {
+                answer = "None";
+              }
+            } else {
+              if (yint < 0) {
+                answer = "y=" + slope + "x" + yint;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yint;
+              } else {
+                answer = "y=" + slope + "x";
+              }
+            }
           } else {
-            answer = "y=" + slope + "x";
+            var yint = y1val - (slope*x1val);
+            if (decimalPlaces(yint) > 2) {
+              var yintt = y*x1val;
+              var yintb = x;
+              if (yint < 0) {
+                answer = "y=" + slope + "x-" + yintt + "/" + yintb;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+              } else {
+                answer = "None";
+              }
+            } else {
+              if (yint < 0) {
+                answer = "y=" + slope + "x" + yint;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yint;
+              } else {
+                answer = "y=" + slope + "x";
+              }
+            }
           }
         }
         document.getElementById('answer6').innerHTML = "Equation: " + answer;
