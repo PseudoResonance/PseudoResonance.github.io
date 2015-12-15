@@ -329,7 +329,11 @@
               y = -Math.abs(y);
               x = Math.abs(x);
             }
-            slope = y + "/" + x;
+            if (x == 1) {
+              slope = y/x;
+            } else {
+              slope = y + "/" + x;
+            }
           }
         }
         var answer = "None";
@@ -349,9 +353,19 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
               } else if (yintt > 0) {
-                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
               } else {
                 answer = "None";
               }
@@ -374,9 +388,19 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
               } else if (yintt > 0) {
-                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
               } else {
                 answer = "None";
               }
@@ -400,7 +424,7 @@
   <div id="form7">
     <form action="" id="perpendicularequationform" onsubmit="return false;">
       <fieldset>
-        <legend>Find the equation of a line through two points.</legend>
+        <legend>Find the equation of a line perpendicular to two points through another point.</legend>
         <label>X<sub>1</sub></label>
         <input name="x1" onclick="findperp()" />
         <label>Y<sub>1</sub></label>
@@ -464,7 +488,11 @@
               y = -Math.abs(y);
               x = Math.abs(x);
             }
-            slope = (new Fraction(-1,1)).multiply(new Fraction(y,x)).toString();
+            if (x == 0) {
+              slope = -1/(y/x);
+            } else {
+              slope = (new Fraction(-1,1)).divide(new Fraction(y,x)).toString();
+            }
           }
         }
         var answer = "None";
@@ -492,9 +520,19 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                if (yintb == 0) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
               } else if (yintt > 0) {
-                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                if (yintb == 0) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
               } else {
                 answer = "None";
               }
@@ -517,9 +555,19 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                if (yintb == 0) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
               } else if (yintt > 0) {
-                answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                if (yintb == 0) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
               } else {
                 answer = "None";
               }
