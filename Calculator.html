@@ -446,7 +446,7 @@
       var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
       if (!match) {return 0;}
       return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
-      function findperp() {
+      function find() {
         var x1val = document.forms["perpendicularequationform"].elements["x1"].value;
         if (x1val == "") {
           x1val = 0;
@@ -489,29 +489,21 @@
               y = -Math.abs(y);
               x = Math.abs(x);
             }
-            if (x == 0) {
+            if (x == 1) {
               slope = -1/(y/x);
             } else {
-              slope = -1*y + "/" + x;
+              slope = -1*x + "/" + y;
             }
           }
         }
         var answer = "None";
         if (slope === "Undefined") {
-          if (x1val === x3val) {
-            answer = "x=" + x1val;
-          } else {
-            answer = "None";
-          }
+          answer = "x=" + x3val;
         } else if (slope === "None") {
-          if (y1val === y3val) {
-            answer = "y=" + y1val;
-          } else {
-            answer = "None";
-          }
+          answer = "y=" + y3val;
         } else {
           if (decimalPlaces(-1/(y/x)) > 2) {
-            var slopea = -1/(y/x);
+            var slopea = -1(y/x);
             var yint = y3val - (slopea*x3val);
             if (decimalPlaces(yint) > 2) {
               var yintt = y*x3val;
@@ -521,14 +513,14 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                if (yintb == 0) {
+                if (yintb == 1) {
                   var yintsolve = yintt/yintb;
                   answer = "y=" + slope + "x" + yintsolve;
                 } else {
                   answer = "y=" + slope + "x" + yintt + "/" + yintb;
                 }
               } else if (yintt > 0) {
-                if (yintb == 0) {
+                if (yintb == 1) {
                   var yintsolve = yintt/yintb;
                   answer = "y=" + slope + "x+" + yintsolve;
                 } else {
@@ -556,14 +548,14 @@
                 yintb = Math.abs(yintb);
               }
               if (yintt < 0) {
-                if (yintb == 0) {
+                if (yintb == 1) {
                   var yintsolve = yintt/yintb;
                   answer = "y=" + slope + "x" + yintsolve;
                 } else {
                   answer = "y=" + slope + "x" + yintt + "/" + yintb;
                 }
               } else if (yintt > 0) {
-                if (yintb == 0) {
+                if (yintb == 1) {
                   var yintsolve = yintt/yintb;
                   answer = "y=" + slope + "x+" + yintsolve;
                 } else {
