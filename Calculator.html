@@ -324,6 +324,10 @@
         } else {
           slope = y/x;
           if (decimalPlaces(slope) > 2) {
+            if (x < 0) {
+              y = -Math.abs(y);
+              x = Math.abs(x);
+            }
             slope = y + "/" + x;
           }
         }
@@ -339,6 +343,10 @@
             if (decimalPlaces(yint) > 2) {
               var yintt = y*x1val;
               var yintb = x;
+              if (yintb < 0) {
+                yintt = -Math.abs(yintt);
+                yintb = Math.abs(yintb);
+              }
               if (yint < 0) {
                 answer = "y=" + slope + "x-" + yintt + "/" + yintb;
               } else if (yint > 0) {
@@ -360,6 +368,10 @@
             if (decimalPlaces(yint) > 2) {
               var yintt = y*x1val;
               var yintb = x;
+              if (yintb < 0) {
+                yintt = -Math.abs(yintt);
+                yintb = Math.abs(yintb);
+              }
               if (yint < 0) {
                 answer = "y=" + slope + "x-" + yintt + "/" + yintb;
               } else if (yint > 0) {
