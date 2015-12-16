@@ -602,11 +602,6 @@
       </fieldset>
     </form>
     <script>
-    $(document).ready(function() {
-      $('#parallelequationform #x1').on('keyup change', function() {
-        findparad();
-      });
-    });
     function decimalPlaces(num) {
       var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
       if (!match) {return 0;}
@@ -742,6 +737,11 @@
         }
         document.getElementById('answer8').innerHTML = "Equation: " + answer;
       }
+    $(document).ready(function() {
+      $('#parallelequationform #x1, #parallelequationform #y1, #parallelequationform #x2, #parallelequationform #y2, #parallelequationform #x3, #parallelequationform #y3').on('keyup change', function() {
+        findparad();
+      });
+    });
     </script>
   </div>
 </body>
