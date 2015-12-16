@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Geometric Calculator</title>
+  <title>Calculator</title>
   <script src="js/math.js"></script>
   <script src="js/fraction.js"></script>
+  <script src="js/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
@@ -503,7 +504,7 @@
           answer = "y=" + y3val;
         } else {
           if (decimalPlaces(-1/(y/x)) > 2) {
-            var slopea = -1(y/x);
+            var slopea = -1/(y/x);
             var yint = y3val - (slopea*x3val);
             if (decimalPlaces(yint) > 2) {
               var yintt = y*x3val;
@@ -576,6 +577,170 @@
           }
         }
         document.getElementById('answer7').innerHTML = "Equation: " + answer;
+      }
+    </script>
+  </div>
+  <br>
+  <br>
+  <div id="form7">
+    <form action="" id="parallelequationform" onsubmit="return false;">
+      <fieldset>
+        <h4>Find the equation of a line parallel to two points through another point.</h4>
+        <label>X<sub>1</sub></label>
+        <input type="number" name="x1" onclick="findpara()" />
+        <label>Y<sub>1</sub></label>
+        <input type="number" name="y1" onclick="findpara()" />
+        <label>X<sub>2</sub></label>
+        <input type="number" name="x2" onclick="findpara()" />
+        <label>Y<sub>2</sub></label>
+        <input type="number" name="y2" onclick="findpara()" />
+        <label>X<sub>3</sub></label>
+        <input type="number" name="x3" onclick="findpara()" />
+        <label>Y<sub>3</sub></label>
+        <input type="number" name="y3" onclick="findpara()" />
+        <div id="answer8">Equation: None</div>
+      </fieldset>
+    </form>
+    <script>
+    $(document).ready(function() {
+      $('#parallelequationform #x1').on('keyup change', function() {
+        findparad();
+      });
+    });
+    function decimalPlaces(num) {
+      var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {return 0;}
+      return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
+      function findparad() {
+        var x1val = document.forms["parallelequationform"].elements["x1"].value;
+        if (x1val == "") {
+          x1val = 0;
+        }
+        var y1val = document.forms["parallelequationform"].elements["y1"].value;
+        if (y1val == "") {
+          y1val = 0;
+        }
+        var x2val = document.forms["parallelequationform"].elements["x2"].value;
+        if (x2val == "") {
+          x2val = 0;
+        }
+        var y2val = document.forms["parallelequationform"].elements["y2"].value;
+        if (y2val == "") {
+          y2val = 0;
+        }
+        var x3val = document.forms["parallelequationform"].elements["x3"].value;
+        if (x3val == "") {
+          x3val = 0;
+        }
+        var y3val = document.forms["parallelequationform"].elements["y3"].value;
+        if (y3val == "") {
+          y3val = 0;
+        }
+        if (x1val == x2val && y1val == y2val) {
+          document.getElementById('answer8').innerHTML = "Equation: None";
+          return;
+        }
+        var y = y1val-y2val;
+        var x = x1val-x2val;
+        var slope = 0;
+        if (x == 0) {
+          slope = "Undefined";
+        } else if (y == 0) {
+          slope = "None";
+        } else {
+          slope = y/x;
+          if (decimalPlaces(slope) > 2) {
+            if (x < 0) {
+              y = -Math.abs(y);
+              x = Math.abs(x);
+            }
+            if (x == 1) {
+              slope = y/x;
+            } else {
+              slope = y + "/" + x;
+            }
+          }
+        }
+        var answer = "None";
+        if (slope === "Undefined") {
+          answer = "x=" + x3val;
+        } else if (slope === "None") {
+          answer = "y=" + y3val;
+        } else {
+          if (decimalPlaces(y/x) > 2) {
+            var slopea = y/x;
+            var yint = y3val - (slopea*x3val);
+            if (decimalPlaces(yint) > 2) {
+              var yintt = y*x3val;
+              var yintb = x;
+              if (yintb < 0) {
+                yintt = -Math.abs(yintt);
+                yintb = Math.abs(yintb);
+              }
+              if (yintt < 0) {
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
+              } else if (yintt > 0) {
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
+              } else {
+                answer = "None";
+              }
+            } else {
+              if (yint < 0) {
+                answer = "y=" + slope + "x" + yint;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yint;
+              } else {
+                answer = "y=" + slope + "x";
+              }
+            }
+          } else {
+            var yint = y3val - (slope*x3val);
+            if (decimalPlaces(yint) > 2) {
+              var yintt = y*x3val;
+              var yintb = x;
+              if (yintb < 0) {
+                yintt = -Math.abs(yintt);
+                yintb = Math.abs(yintb);
+              }
+              if (yintt < 0) {
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x" + yintt + "/" + yintb;
+                }
+              } else if (yintt > 0) {
+                if (yintb == 1) {
+                  var yintsolve = yintt/yintb;
+                  answer = "y=" + slope + "x+" + yintsolve;
+                } else {
+                  answer = "y=" + slope + "x+" + yintt + "/" + yintb;
+                }
+              } else {
+                answer = "None";
+              }
+            } else {
+              if (yint < 0) {
+                answer = "y=" + slope + "x" + yint;
+              } else if (yint > 0) {
+                answer = "y=" + slope + "x+" + yint;
+              } else {
+                answer = "y=" + slope + "x";
+              }
+            }
+          }
+        }
+        document.getElementById('answer8').innerHTML = "Equation: " + answer;
       }
     </script>
   </div>
