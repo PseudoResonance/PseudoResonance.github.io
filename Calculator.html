@@ -480,9 +480,9 @@
         var x = x1val-x2val;
         var slope = 0;
         if (x == 0) {
-          slope = "Undefined";
-        } else if (y == 0) {
           slope = "None";
+        } else if (y == 0) {
+          slope = "Undefined";
         } else {
           slope = -1/(y/x);
           if (decimalPlaces(slope) > 2) {
