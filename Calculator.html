@@ -5,6 +5,8 @@
   <script src="js/math.js"></script>
   <script src="js/fraction.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
+  <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
   <link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
@@ -69,7 +71,7 @@
         <label>Point Y<sub>2</sub></label>
         <input type="number"  name="y2" onclick="findMid()" />
         <div id="answer2">Answer: (0,0)</div>
-        <h3>Equation: (<sup>x<sup>1</sup>+x<sup>2</sup></sup>&frasl;<sub>2</sub>,<sup>y<sup>1</sup>+y<sup>2</sup></sup>&frasl;<sub>2</sub>)</h3>
+        <h3>Equation: ($\frac{x<sup>1</sup>+x<sup>2</sup>}{2}$,$\frac{y<sup>1</sup>+y<sup>2</sup>}{2}$)</h3>
       </fieldset>
     </form>
     <script>
