@@ -8,19 +8,18 @@
   <link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
-  $\sqrt{(a^5+b_6)}$
   <div id="form1">
     <form action="" id="distanceform" onsubmit="return false;">
       <fieldset>
         <h4>Find the Distance Between Any 2 Points</h4>
         <label>X<sub>1</sub></label>
-        <input type="number"  name="x1" onclick="findDistance()" />
+        <input type="number"  name="x1" onclick="findDistance()" onkeyup="findDistance()" onkeydown="findDistance()" />
         <label>Y<sub>1</sub></label>
-        <input type="number"  name="y1" onclick="findDistance()" />
+        <input type="number"  name="y1" onclick="findDistance()" onkeyup="findDistance()" onkeydown="findDistance()" />
         <label>X<sub>2</sub></label>
-        <input type="number"  name="x2" onclick="findDistance()" />
+        <input type="number"  name="x2" onclick="findDistance()" onkeyup="findDistance()" onkeydown="findDistance()" />
         <label>Y<sub>2</sub></label>
-        <input type="number"  name="y2" onclick="findDistance()" />
+        <input type="number"  name="y2" onclick="findDistance()" onkeyup="findDistance()" onkeydown="findDistance()" />
         <div id="answer1">Answer: 0</div>
         <h3>Equation: $\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$</h3>
       </fieldset>
@@ -62,13 +61,13 @@
       <fieldset>
         <h4>Find the Midpoint Between Any 2 Points</h4>
         <label>X<sub>1</sub></label>
-        <input type="number"  name="x1" onclick="findMid()" />
+        <input type="number"  name="x1" onclick="findMid()" onkeyup="findMid()" onkeydown="findMid()" />
         <label>Y<sub>1</sub></label>
-        <input type="number"  name="y1" onclick="findMid()" />
+        <input type="number"  name="y1" onclick="findMid()" onkeyup="findMid()" onkeydown="findMid()" />
         <label>X<sub>2</sub></label>
-        <input type="number"  name="x2" onclick="findMid()" />
+        <input type="number"  name="x2" onclick="findMid()" onkeyup="findMid()" onkeydown="findMid()" />
         <label>Y<sub>2</sub></label>
-        <input type="number"  name="y2" onclick="findMid()" />
+        <input type="number"  name="y2" onclick="findMid()" onkeyup="findMid()" onkeydown="findMid()" />
         <div id="answer2">Answer: (0,0)</div>
         <h3>Equation: $(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2})$</h3>
       </fieldset>
@@ -120,13 +119,13 @@
       <fieldset>
         <h4>Find Distance and Midpoint</h4>
         <label>X<sub>1</sub></label>
-        <input type="number"  name="x1" onclick="findBoth()" />
+        <input type="number"  name="x1" onclick="findBoth()" onkeyup="findBoth()" onkeydown="findBoth()" />
         <label>Y<sub>1</sub></label>
-        <input type="number"  name="y1" onclick="findBoth()" />
+        <input type="number"  name="y1" onclick="findBoth()" onkeyup="findBoth()" onkeydown="findBoth()" />
         <label>X<sub>2</sub></label>
-        <input type="number"  name="x2" onclick="findBoth()" />
+        <input type="number"  name="x2" onclick="findBoth()" onkeyup="findBoth()" onkeydown="findBoth()" />
         <label>Y<sub>2</sub></label>
-        <input type="number"  name="y2" onclick="findBoth()" />
+        <input type="number"  name="y2" onclick="findBoth()" onkeyup="findBoth()" onkeydown="findBoth()" />
         <div id="answer3d">Distance Answer: 0</div>
         <div id="answer3m">Midpoint Answer: (0,0)</div>
       </fieldset>
@@ -183,17 +182,17 @@
       <fieldset>
         <h4>Find the Perimeter of a Triangle with it's 3 Points</h4>
         <label>X<sub>1</sub></label>
-        <input type="number"  name="x1" onclick="findTriangle()" />
+        <input type="number"  name="x1" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <label>Y<sub>1</sub></label>
-        <input type="number"  name="y1" onclick="findTriangle()" />
+        <input type="number"  name="y1" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <label>X<sub>2</sub></label>
-        <input type="number"  name="x2" onclick="findTriangle()" />
+        <input type="number"  name="x2" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <label>Y<sub>2</sub></label>
-        <input type="number"  name="y2" onclick="findTriangle()" />
+        <input type="number"  name="y2" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <label>X<sub>3</sub></label>
-        <input type="number"  name="x3" onclick="findTriangle()" />
+        <input type="number"  name="x3" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <label>Y<sub>3</sub></label>
-        <input type="number"  name="y3" onclick="findTriangle()" />
+        <input type="number"  name="y3" onclick="findTriangle()" onkeyup="findTriangle()" onkeydown="findTriangle()" />
         <div id="answer4">Answer: 0</div>
       </fieldset>
     </form>
@@ -251,9 +250,9 @@
       <fieldset>
         <h4>Find the value of Y depending on value of X in specified equation.</h4>
         <label>Equation</label>
-        <input name="equation" onclick="parse()" />
+        <input name="equation" onclick="parse()" onkeyup="parse()" onkeydown="parse()" />
         <label>X</label>
-        <input type="number" name="x" onclick="parse()" />
+        <input type="number" name="x" onclick="parse()" onkeyup="parse()" onkeydown="parse()" />
         <div id="answer5">Y: Undefined</div>
       </fieldset>
     </form>
@@ -284,13 +283,13 @@
       <fieldset>
         <h4>Find the equation of a line through two points.</h4>
         <label>X<sub>1</sub></label>
-        <input type="number" name="x1" onclick="find()" />
+        <input type="number" name="x1" onclick="find()" onkeyup="find()" onkeydown="find()" />
         <label>Y<sub>1</sub></label>
-        <input type="number" name="y1" onclick="find()" />
+        <input type="number" name="y1" onclick="find()" onkeyup="find()" onkeydown="find()" />
         <label>X<sub>2</sub></label>
-        <input type="number" name="x2" onclick="find()" />
+        <input type="number" name="x2" onclick="find()" onkeyup="find()" onkeydown="find()" />
         <label>Y<sub>2</sub></label>
-        <input type="number" name="y2" onclick="find()" />
+        <input type="number" name="y2" onclick="find()" onkeyup="find()" onkeydown="find()" />
         <div id="answer6">Equation: None</div>
       </fieldset>
     </form>
@@ -431,17 +430,17 @@
       <fieldset>
         <h4>Find the equation of a line perpendicular to two points through another point.</h4>
         <label>X<sub>1</sub></label>
-        <input type="number" name="x1" onclick="findperp()" />
+        <input type="number" name="x1" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <label>Y<sub>1</sub></label>
-        <input type="number" name="y1" onclick="findperp()" />
+        <input type="number" name="y1" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <label>X<sub>2</sub></label>
-        <input type="number" name="x2" onclick="findperp()" />
+        <input type="number" name="x2" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <label>Y<sub>2</sub></label>
-        <input type="number" name="y2" onclick="findperp()" />
+        <input type="number" name="y2" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <label>X<sub>3</sub></label>
-        <input type="number" name="x3" onclick="findperp()" />
+        <input type="number" name="x3" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <label>Y<sub>3</sub></label>
-        <input type="number" name="y3" onclick="findperp()" />
+        <input type="number" name="y3" onclick="findperp()" onkeyup="findperp()" onkeydown="findperp()" />
         <div id="answer7">Equation: None</div>
       </fieldset>
     </form>
@@ -590,17 +589,17 @@
       <fieldset>
         <h4>Find the equation of a line parallel to two points through another point.</h4>
         <label>X<sub>1</sub></label>
-        <input type="number" name="x1" onclick="findpara()" />
+        <input type="number" name="x1" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <label>Y<sub>1</sub></label>
-        <input type="number" name="y1" onclick="findpara()" />
+        <input type="number" name="y1" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <label>X<sub>2</sub></label>
-        <input type="number" name="x2" onclick="findpara()" />
+        <input type="number" name="x2" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <label>Y<sub>2</sub></label>
-        <input type="number" name="y2" onclick="findpara()" />
+        <input type="number" name="y2" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <label>X<sub>3</sub></label>
-        <input type="number" name="x3" onclick="findpara()" />
+        <input type="number" name="x3" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <label>Y<sub>3</sub></label>
-        <input type="number" name="y3" onclick="findpara()" />
+        <input type="number" name="y3" onclick="findpara()" onkeyup="findpara()" onkeydown="findpara()" />
         <div id="answer8">Equation: None</div>
       </fieldset>
     </form>
