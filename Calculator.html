@@ -587,7 +587,7 @@
   </div>
   <br>
   <br>
-  <div id="form7">
+  <div id="form8">
     <form action="" id="parallelequationform" onsubmit="return false;">
       <fieldset>
         <h4>Find the equation of a line parallel to two points through another point.</h4>
@@ -741,6 +741,44 @@
           }
         }
         document.getElementById('answer8').innerHTML = "Equation: " + answer;
+      }
+    </script>
+  </div>
+  <br>
+  <br>
+  <div id="form9">
+    <form action="" id="quadraticequationform" onsubmit="return false;">
+      <fieldset>
+        <h4>Find the solutions to a quadratic equation.</h4>
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>1</mn></msub></math></label>
+        <input type="number" name="a" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />&nbsp&nbsp&nbsp&nbsp
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>y</mi><mn>1</mn></msub></math></label>
+        <input type="number" name="b" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />&nbsp&nbsp&nbsp&nbsp
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>2</mn></msub></math></label>
+        <input type="number" name="c" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />
+        <div id="answer9">Equation: None</div>
+        <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt> <mn>2</mn><mi>a</mi></mfrac></math></h3>
+      </fieldset>
+    </form>
+    <script>
+    function decimalPlaces(num) {
+      var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {return 0;}
+      return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
+      function findquad() {
+        var aval = document.forms["quadraticequationform"].elements["a"].value;
+        if (aval == "") {
+          aval = 0;
+        }
+        var bval = document.forms["quadraticequationform"].elements["b"].value;
+        if (bval == "") {
+          bval = 0;
+        }
+        var cval = document.forms["quadraticequationform"].elements["c"].value;
+        if (cval == "") {
+          cval = 0;
+        }
+        document.getElementById('answer9').innerHTML = "Answers: " + answer;
       }
     </script>
   </div>
