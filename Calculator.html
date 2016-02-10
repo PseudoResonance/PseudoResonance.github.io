@@ -270,9 +270,9 @@
         };
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
         var answer = code.eval(scope);
-        if (answer === "Infinity") {
+        if (!(isFinite(answer))) {
           answer = "Error";
-        } else if (answer === "undefined") {
+        } else if (isNaN(answer)) {
           answer = "Undefined";
         }
         document.getElementById('answer5').innerHTML = "Y: " + answer;
@@ -759,7 +759,7 @@
         <input type="number" name="b" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />&nbsp&nbsp&nbsp&nbsp
         <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math></label>
         <input type="number" name="c" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />
-        <div id="answer9">Equation: None</div>
+        <div id="answer9">Answers: None, None</div>
         <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></h3>
       </fieldset>
     </form>
@@ -786,10 +786,10 @@
         var bn = -bval;
         var a1 = (bn + t)/b;
         var a2 = (bn - t)/b;
-        if (a1 == "NaN") {
+        if (isNaN(a1)) {
           a1 = "None";
         }
-        if (a2 == "NaN") {
+        if (isNaN(a2)) {
           a2 = "None";
         }
         var answer = a1 + ", " + a2;
