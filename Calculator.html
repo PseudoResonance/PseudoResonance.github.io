@@ -270,11 +270,8 @@
         };
         var code = (math.parse(document.forms["equationform"].elements["equation"].value, scope)).compile();
         var answer = code.eval(scope);
-        if (isNaN(answer)) {
-          answer = "None";
-        }
         if (!(isFinite(answer))) {
-          answer = "Infinity"
+          answer = "Error/None/Undefined/Infinity"
         }
         document.getElementById('answer5').innerHTML = "Y: " + answer;
       }
