@@ -780,7 +780,7 @@
         }
         var t = Math.sqrt((bval * bval) - (4 * aval * cval));
         var b = 2 * aval;
-        var bn = -b;
+        var bn = -bval;
         var a1 = (bn + t)/b;
         var a2 = (bn - t)/b;
         if (a1 == "NaN") {
@@ -789,7 +789,6 @@
         if (a2 == "NaN") {
           a2 = "None";
         }
-        console.log(aval + ", " + bval + ", " + cval + ", " + t + ", " + b + ", " + bn + ", ")
         var answer = a1 + ", " + a2;
         document.getElementById('answer9').innerHTML = "Answers: " + answer;
       }
