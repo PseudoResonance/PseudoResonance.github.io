@@ -750,11 +750,11 @@
     <form action="" id="quadraticequationform" onsubmit="return false;">
       <fieldset>
         <h4>Find the solutions to a quadratic equation.</h4>
-        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>1</mn></msub></math></label>
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></label>
         <input type="number" name="a" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />&nbsp&nbsp&nbsp&nbsp
-        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>y</mi><mn>1</mn></msub></math></label>
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></label>
         <input type="number" name="b" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />&nbsp&nbsp&nbsp&nbsp
-        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>2</mn></msub></math></label>
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math></label>
         <input type="number" name="c" onclick="findquad()" onkeyup="findquad()" onkeydown="findquad()" />
         <div id="answer9">Equation: None</div>
         <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></h3>
@@ -778,11 +778,18 @@
         if (cval == "") {
           cval = 0;
         }
-        var t = Math.sqrt(Math.pow(bval, 2) - (4 * aval * cval));
+        var t = Math.sqrt((bval * bval) - (4 * aval * cval));
         var b = 2 * aval;
         var bn = -1 * b;
         var a1 = (bn + t)/b;
         var a2 = (bn - t)/b;
+        if (a1 == "NaN") {
+          a1 = "None";
+        }
+        if (a2 == "NaN") {
+          a2 = "None";
+        }
+        console.log(aval + ", " + bval + ", " + cval + ", " + t + ", " + b + ", " + bn + ", ")
         var answer = a1 + ", " + a2;
         document.getElementById('answer9').innerHTML = "Answers: " + answer;
       }
