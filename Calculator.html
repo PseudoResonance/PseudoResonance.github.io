@@ -8,22 +8,43 @@
   <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
+  <script>
+    function setCSS() {
+      if (getCookie("css") == "light") {
+        var oldlink = document.getElementsByTagName("link").item(0);
+        var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", 'css/lightcalculator.css');
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+      }
+    }
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+      }
+      return "";
+    }
+    window.onload = setCSS;
+  </script>
   <br>
   <div id="header">
-    <a class="light" href="#" onclick="changeCSS('css/lightcalculator.css', 0);">Light Theme</a>&nbsp&nbsp&nbsp&nbsp<a class="dark" href="#" onclick="changeCSS('css/darkcalculator.css', 0);">Dark Theme</a>
+    <a class="light" href="#" onclick="changeCSS('css/lightcalculator.css', 0, "light");">Light Theme</a>&nbsp&nbsp&nbsp&nbsp<a class="dark" href="#" onclick="changeCSS('css/darkcalculator.css', 0, "dark");">Dark Theme</a>
     <script>
-    function changeCSS(cssFile, cssLinkIndex) {
-
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-}
-</script>
+    function changeCSS(cssFile, cssLinkIndex, css) {
+      document.cookie="css=" + css;
+      var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("type", "text/css");
+      newlink.setAttribute("href", cssFile);
+      document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    }
+  </script>
   </div>
   <br>
   <br>
