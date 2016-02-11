@@ -41,6 +41,46 @@ font-family:"wf_segoe-ui_Semibold";
 color:rgb(225,225,225);
 }
 
+a.light,a.light:clicked {
+height:8%;
+top:1%;
+left:20%;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+color:rgb(190,190,190);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+a.light:hover,a.light:focus {
+background:rgb(255,255,255);
+border:1px solid rgb(255,255,255);
+color:rgb(0,0,0);
+}
+
+a.dark,a.dark:clicked {
+height:8%;
+top:1%;
+right:20%;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+color:rgb(40,40,40);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+a.dark:hover,a.dark:focus {
+background:rgb(0,0,0);
+border:1px solid rgb(0,0,0);
+color:rgb(255,255,255);
+}
+
 hr {
 background:rgb(100,100,100);
 border:0;
