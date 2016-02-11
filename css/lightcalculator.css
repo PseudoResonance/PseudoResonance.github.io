@@ -34,6 +34,55 @@ body {
 background:rgb(240,240,240);
 }
 
+div.header {
+top:0px;
+height:10%;
+font-family:"wf_segoe-ui_Semibold";
+color:rgb(225,225,225);
+}
+
+a.light,a.light:visited {
+height:15%;
+width:15%;
+top:1%;
+left:20%;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+color:rgb(40,40,40);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+a.light:hover,a.light:active {
+background:rgb(225,225,225);
+border:1px solid rgb(225,225,225);
+color:rgb(30,30,30);
+}
+
+a.dark,a.dark:visited {
+height:15%;
+width:15%;
+top:1%;
+right:20%;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+color:rgb(40,40,40);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+a.dark:hover,a.dark:active {
+background:rgb(30,30,30);
+border:1px solid rgb(30,30,30);
+color:rgb(225,225,225);
+}
+
 hr {
 background:rgb(0,0,0);
 border:0;
