@@ -41,7 +41,7 @@ font-family:"wf_segoe-ui_Semibold";
 color:rgb(225,225,225);
 }
 
-a.light,a.light:clicked {
+a.light,a.light:visited {
 height:8%;
 top:1%;
 left:20%;
@@ -55,13 +55,13 @@ transition:background 0.5s, border 0.5s, color 0.5s;
 -webkit-transition:background 0.5s, border 0.5s, color 0.5s;
 }
 
-a.light:hover,a.light:focus {
-background:rgb(255,255,255);
-border:1px solid rgb(255,255,255);
-color:rgb(0,0,0);
+a.light:hover,a.light:active {
+background:rgb(225,225,225);
+border:1px solid rgb(225,225,225);
+color:rgb(30,30,30);
 }
 
-a.dark,a.dark:clicked {
+a.dark,a.dark:visited {
 height:8%;
 top:1%;
 right:20%;
@@ -75,10 +75,10 @@ transition:background 0.5s, border 0.5s, color 0.5s;
 -webkit-transition:background 0.5s, border 0.5s, color 0.5s;
 }
 
-a.dark:hover,a.dark:focus {
-background:rgb(0,0,0);
-border:1px solid rgb(0,0,0);
-color:rgb(255,255,255);
+a.dark:hover,a.dark:active {
+background:rgb(30,30,30);
+border:1px solid rgb(30,30,30);
+color:rgb(225,225,225);
 }
 
 hr {
