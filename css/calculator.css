@@ -1,0 +1,103 @@
+@font-face {
+font-family:"wf_segoe-ui_light";
+src:url(//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot);
+src:local("Segoe UI Light"),local("Segoe WP Light"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix) format("embedded-opentype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web) format("svg");
+font-weight:400;
+font-style:normal
+}
+
+@font-face {
+font-family:"wf_segoe-ui_normal";
+src:url(//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot);
+src:local("Segoe UI"),local("Segoe"),local("Segoe WP"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix) format("embedded-opentype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web) format("svg");
+font-weight:400;
+font-style:normal
+}
+
+@font-face {
+font-family:"wf_segoe-ui_Semibold";
+src:url(//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot);
+src:local("Segoe UI Semibold"),local("Segoe Semibold"),local("Segoe WP Semibold"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot?#iefix) format("embedded-opentype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.woff) format("woff"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.ttf) format("truetype"),url(//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.svg#web) format("svg");
+font-weight:400;
+font-style:normal
+}
+
+@font-face {
+font-family:"wf_icons_normal";
+src:url(//i.s-microsoft.com/fonts/icons/homepage/normal/2.eot);
+src:url(//i.s-microsoft.com/fonts/icons/homepage/normal/2.eot?#iefix) format("embedded-opentype"),url(//i.s-microsoft.com/fonts/icons/homepage/normal/2.woff) format("woff"),url(//i.s-microsoft.com/fonts/icons/homepage/normal/2.ttf) format("truetype"),url(//i.s-microsoft.com/fonts/icons/homepage/normal/2.svg#web) format("svg");
+font-weight:400;
+font-style:normal
+}
+
+div.header {
+top:0px;
+height:10%;
+font-family:"wf_segoe-ui_Semibold";
+}
+
+a.light,a.light:visited {
+height:15%;
+width:15%;
+padding:5px;
+top:1%;
+left:20%;
+text-decoration:none;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+a.dark,a.dark:visited {
+height:15%;
+width:15%;
+padding:5px;
+top:1%;
+right:20%;
+text-decoration:none;
+background:rgb(119,119,119);
+border:1px solid rgb(119,119,119);
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+hr {
+border:0;
+height:1px;
+}
+
+h4 {
+font-family:"wf_segoe-ui_Semibold";
+}
+
+fieldset {
+font-family:"wf_segoe-ui_normal";
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+input {
+transition:background 0.5s, border 0.5s, color 0.5s;
+-o-transition:background 0.5s, border 0.5s, color 0.5s;
+-ms-transition:background 0.5s, border 0.5s, color 0.5s;
+-moz-transition:background 0.5s, border 0.5s, color 0.5s;
+-webkit-transition:background 0.5s, border 0.5s, color 0.5s;
+}
+
+div,label {
+font:15px wf_segoe-ui_normal;
+}
+
+h4 {
+font:20px wf_segoe-ui_Semibold;
+}
