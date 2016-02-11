@@ -34,16 +34,28 @@ body {
 background:rgb(0,0,0);
 }
 
+div.header {
+top:0px;
+height:10%;
+font-family:"wf_segoe-ui_Semibold";
+color:rgb(225,225,225);
+}
+
 hr {
 background:rgb(100,100,100);
 border:0;
 height:1px;
 }
 
+h4 {
+font-family:"wf_segoe-ui_Semibold";
+}
+
 fieldset {
 background:rgb(50,50,50);
 border:1px solid rgb(10,10,10);
 color:rgb(225,225,225);
+font-family:"wf_segoe-ui_normal";
 transition:background 0.5s, border 0.5s, color 0.5s;
 -o-transition:background 0.5s, border 0.5s, color 0.5s;
 -ms-transition:background 0.5s, border 0.5s, color 0.5s;
