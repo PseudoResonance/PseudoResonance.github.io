@@ -30,10 +30,23 @@ font-weight:400;
 font-style:normal
 }
 
+body {
+transition:background 0.5s;
+-o-transition:background 0.5s;
+-ms-transition:background 0.5s;
+-moz-transition:background 0.5s;
+-webkit-transition:background 0.5s;
+}
+
 div.header {
 top:0px;
 height:10%;
 font-family:"wf_segoe-ui_Semibold";
+transition:color 0.5s;
+-o-transition:color 0.5s;
+-ms-transition:color 0.5s;
+-moz-transition:color 0.5s;
+-webkit-transition:color 0.5s;
 }
 
 a.light,a.light:visited {
@@ -71,6 +84,11 @@ transition:background 0.5s, border 0.5s, color 0.5s;
 hr {
 border:0;
 height:1px;
+transition:background 0.5s;
+-o-transition:background 0.5s;
+-ms-transition:background 0.5s;
+-moz-transition:background 0.5s;
+-webkit-transition:background 0.5s;
 }
 
 h4 {
