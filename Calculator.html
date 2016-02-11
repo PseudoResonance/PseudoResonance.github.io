@@ -36,7 +36,7 @@
     <a class="light" href="#" onclick="changeCSS('css/lightcalculator.css', 0, 'light');">Light Theme</a>&nbsp&nbsp&nbsp&nbsp<a class="dark" href="#" onclick="changeCSS('css/darkcalculator.css', 0, 'dark');">Dark Theme</a>
     <script>
     function changeCSS(cssFile, cssLinkIndex, css) {
-      document.cookie = "css=" + css;
+      document.cookie = "css=" + css + "; expires=Sat, 1 Jan 2050 12:00:00 UTC";
       var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
       var newlink = document.createElement("link");
       newlink.setAttribute("rel", "stylesheet");
