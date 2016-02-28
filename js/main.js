@@ -39,7 +39,7 @@ function pre_loader() {
 		document.getElementById('footer').style.height="85px";
 	} else if(window.innerWidth >= "800") {
 		document.getElementById('main').style.position="fixed";
-		document.getElementById('navbar').style.position=fixed;
+		document.getElementById('navbar').style.position="fixed";
 		document.getElementById('title').style.position="fixed";
 		document.getElementById('titletransparent').style.position="fixed";
 		document.getElementById('title').style.top="30px"
@@ -181,7 +181,7 @@ window.onresize = function(event) {
 		document.getElementById('footer').style.height="85px";
 	} else if(window.innerWidth >= "800") {
 		document.getElementById('main').style.position="fixed";
-		document.getElementById('navbar').style.position=fixed;
+		document.getElementById('navbar').style.position="fixed";
 		document.getElementById('title').style.position="fixed";
 		document.getElementById('titletransparent').style.position="fixed";
 		document.getElementById('title').style.top="30px"
