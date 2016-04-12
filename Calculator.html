@@ -27,8 +27,14 @@
         newlink.setAttribute("href", 'css/lightcalculator.css');
         document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
       } else {
-        var newyear = new Date().getFullYear() + 50;
-        document.cookie = "css=dark; expires=Sat, 1 Jan " + newyear  + " 12:00:00 UTC";
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth();
+        var newyear = date.getFullYear() + 50;
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        document.cookie = "css=dark; expires=" + day + month + newyear  + " " + hour + ":" + minute + ":" + second + " UTC";
       }
     }
     function getCookie(cname) {
@@ -48,8 +54,14 @@
     <a class="light" href="#" onclick="changeCSS('css/lightcalculator.css', 0, 'light');">Light Theme</a>&nbsp&nbsp&nbsp&nbsp<a class="dark" href="#" onclick="changeCSS('css/darkcalculator.css', 0, 'dark');">Dark Theme</a>
     <script>
     function changeCSS(cssFile, cssLinkIndex, css) {
-      var newyear = new Date().getFullYear() + 50;
-      document.cookie = "css=" + css + "; expires=Sat, 1 Jan " + newyear  + " 12:00:00 UTC";
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth();
+        var newyear = date.getFullYear() + 50;
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        document.cookie = "css=" + css + "; expires=" + day + month + newyear  + " " + hour + ":" + minute + ":" + second + " UTC";
       var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
       var newlink = document.createElement("link");
       newlink.setAttribute("rel", "stylesheet");
