@@ -12,8 +12,14 @@
   <script>
     function setCSS() {
       if (getCookie("css") == "light") {
-        var newyear = new Date().getFullYear() + 50;
-        document.cookie = "css=light; expires=Sat, 1 Jan " + newyear  + " 12:00:00 UTC";
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth();
+        var newyear = date.getFullYear() + 50;
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        document.cookie = "css=light; expires=" + day + month + newyear  + " " + hour + ":" + minute + ":" + second + " UTC";
         var oldlink = document.getElementsByTagName("link").item(0);
         var newlink = document.createElement("link");
         newlink.setAttribute("rel", "stylesheet");
