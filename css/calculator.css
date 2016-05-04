@@ -119,3 +119,9 @@ font:15px wf_segoe-ui_normal;
 h4 {
 font:20px wf_segoe-ui_Semibold;
 }
+
+#trendlinePoints {
+  height:10%;
+  width:10%;
+  background-color:rgb(255,255,255);
+}
