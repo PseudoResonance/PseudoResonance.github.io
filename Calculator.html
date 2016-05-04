@@ -851,5 +851,77 @@
       }
     </script>
   </div>
+  <br>
+  <br>
+  <div id="form10">
+    <form action="" id="trendlineform" onsubmit="return false;">
+      <fieldset>
+        <h4>Find the trendline of some points.</h4>
+        <div id="trendpoints">
+        <label>Point 1</label>
+        <input type="number" name="point1" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />&nbsp&nbsp&nbsp&nbsp
+        <label>Point 2</label>
+        <input type="number" name="point2" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
+        </div>
+        <button onclick="addTrendlinePoints() id="trendlinePoints"></button>
+        <h5><div id="answer10">Answers: None</div></h5>
+        <hr>
+        <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></h3>
+      </fieldset>
+    </form>
+    <script>
+    function decimalPlaces(num) {
+      var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {return 0;}
+      return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
+      var points = 2;
+      function addTrendlinePoint() {
+        var element = document.getElementById("trendpoints");
+        points = points + 1;
+        var text = document.createTextNode("\xa0\xa0\xa0\xa0");
+        element.appendChild(text);
+        var label = document.createElement("label");
+        var text = document.createTextNode("Point " + n);
+        label.appendChild(text);
+        element.appendChild(label);
+        var text = document.createTextNode("\xa0");
+        element.appendChild(text);
+        var input = document.createElement("input");
+        input.setAttribute("type", "number");
+        input.setAttribute("name", "point" + n);
+        input.setAttribute("onclick", "findtrendline()");
+        input.setAttribute("onkeyup", "findtrendline()");
+        input.setAttribute("onkeydown", "findtrendline()");
+        element.appendChild(input);
+      }
+      function findtrendline() {
+        var aval = document.forms["trendlineform"].elements["a"].value;
+        if (aval == "") {
+          aval = 0;
+        }
+        var bval = document.forms["trendlineform"].elements["b"].value;
+        if (bval == "") {
+          bval = 0;
+        }
+        var cval = document.forms["trendlineform"].elements["c"].value;
+        if (cval == "") {
+          cval = 0;
+        }
+        var t = Math.sqrt((bval * bval) - (4 * aval * cval));
+        var b = 2 * aval;
+        var bn = -bval;
+        var a1 = (bn + t)/b;
+        var a2 = (bn - t)/b;
+        if (isNaN(a1)) {
+          a1 = "None";
+        }
+        if (isNaN(a2)) {
+          a2 = "None";
+        }
+        var answer = a1 + ", " + a2;
+        document.getElementById('answer10').innerHTML = "Answers: " + answer;
+      }
+    </script>
+  </div>
 </body>
 </html>
