@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Calculator</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/darkcalculator.css">
   <link rel="stylesheet" type="text/css" href="css/calculator.css">
   <script src="js/math.js"></script>
@@ -857,19 +858,34 @@
     <form action="" id="trendlineform" onsubmit="return false;">
       <fieldset>
         <h4>Find the trendline of some points.</h4>
-        <div id="trendpoints">
-        <label>Point 1</label>
-        <input type="number" name="point1" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />&nbsp&nbsp&nbsp&nbsp
-        <label>Point 2</label>
-        <input type="number" name="point2" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
-        </div>
-        <a class="trendlinePoints" href="#" onclick="addTrendlinePoint();">Add Point</a>
+        <span id="trendpoints">
+        <span class="nobreak">
+        <label>Point 1 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></label>
+        <input type="number" name="point1x" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Point 1 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></label>
+        <input type="number" name="point1y" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
+        </span>
+        &ensp;&ensp;
+        <span class="nobreak">
+        <label>Point 2 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></label>
+        <input type="number" name="point2x" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Point 2 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></label>
+        <input type="number" name="point2y" onclick="findtrendline()" onkeyup="findtrendline()" onkeydown="findtrendline()" />
+        </span>
+        </span>
+        <a id="trendlinePoints" class="trendlinePoints" href="#" onclick="addTrendlinePoint();">Add Point</a>
         <h5><div id="answer10">Answers: None</div></h5>
         <hr>
-        <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></h3>
+        <h3><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo></math>Number of Points</h3>
+        <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mfrac><mrow><mo>(</mo><mi>n</mi><mo>•</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>,</mo><msub><mi>y</mi><mi>1</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>2</mi></msub><mo>,</mo><msub><mi>y</mi><mi>2</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>}</mo><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mrow><mo>(</mo><mo>(</mo><msup><mrow><msub><mi>x</mi><mi>1</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>2</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow><mn>2</mn></msup><mo>)</mo><mo>-</mo><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>)</mo></mrow></mfrac><mi>x</mi><mo>+</mo><mfrac><mrow><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><mfrac><mrow><mo>(</mo><mi>n</mi><mo>•</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>,</mo><msub><mi>y</mi><mi>1</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>2</mi></msub><mo>,</mo><msub><mi>y</mi><mi>2</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>}</mo><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mrow><mo>(</mo><mo>(</mo><msup><mrow><msub><mi>x</mi><mi>1</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>2</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow><mn>2</mn></msup><mo>)</mo><mo>-</mo><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>)</mo></mrow></mfrac><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mi>n</mi></mfrac></math></h3>
       </fieldset>
     </form>
     <script>
+    document.getElementById('trendlinePoints').addEventListener('click', function (e) {
+      e.preventDefault();
+    })
     function decimalPlaces(num) {
       var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
       if (!match) {return 0;}
@@ -878,48 +894,134 @@
       function addTrendlinePoint() {
         var element = document.getElementById("trendpoints");
         points = points + 1;
-        var text = document.createTextNode("\xa0\xa0\xa0\xa0");
+        var text = document.createTextNode("\u2002\u2002");
         element.appendChild(text);
+        var span = document.createElement("span");
+        span.setAttribute("class", "nobreak");
         var label = document.createElement("label");
-        var text = document.createTextNode("Point " + n);
+        var text = document.createTextNode("Point " + points + " ");
+        var math = document.createElement("math");
+        math.setAttribute("xmlns", "http://www.w3.org/1998/Math/MathML");
+        var mi = document.createElement("mi");
+        var mitext = document.createTextNode("x");
+        mi.appendChild(mitext);
+        math.appendChild(mi);
         label.appendChild(text);
-        element.appendChild(label);
+        label.appendChild(math);
+        span.appendChild(label);
         var text = document.createTextNode("\xa0");
-        element.appendChild(text);
+        span.appendChild(text);
         var input = document.createElement("input");
         input.setAttribute("type", "number");
-        input.setAttribute("name", "point" + n);
+        input.setAttribute("name", "point" + points + "x");
         input.setAttribute("onclick", "findtrendline()");
         input.setAttribute("onkeyup", "findtrendline()");
         input.setAttribute("onkeydown", "findtrendline()");
-        element.appendChild(input);
+        span.appendChild(input);
+        var text = document.createTextNode("\xa0\xa0\xa0\xa0");
+        span.appendChild(text);
+        var label = document.createElement("label");
+        var text = document.createTextNode("Point " + points + " ");
+        var math = document.createElement("math");
+        math.setAttribute("xmlns", "http://www.w3.org/1998/Math/MathML");
+        var mi = document.createElement("mi");
+        var mitext = document.createTextNode("y");
+        mi.appendChild(mitext);
+        math.appendChild(mi);
+        label.appendChild(text);
+        label.appendChild(math);
+        span.appendChild(label);
+        var text = document.createTextNode("\xa0");
+        span.appendChild(text);
+        var input = document.createElement("input");
+        input.setAttribute("type", "number");
+        input.setAttribute("name", "point" + points + "y");
+        input.setAttribute("onclick", "findtrendline()");
+        input.setAttribute("onkeyup", "findtrendline()");
+        input.setAttribute("onkeydown", "findtrendline()");
+        span.appendChild(input);
+        element.appendChild(span);
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        findtrendline();
       }
+      var previousSlope = 0;
+      var previousYint = 0;
       function findtrendline() {
-        var aval = document.forms["trendlineform"].elements["a"].value;
-        if (aval == "") {
-          aval = 0;
+        var a = 0;
+        for (i = 1; i <= points; i++) {
+          var nextxval = document.forms["trendlineform"].elements["point" + i + "x"].value
+          if (nextxval == "") {
+            nextxval = 0;
+          }
+          var nextyval = document.forms["trendlineform"].elements["point" + i + "y"].value
+          if (nextyval == "") {
+            nextyval = 0;
+          }
+          var multiplied = nextxval*nextyval;
+          a = a + multiplied;
         }
-        var bval = document.forms["trendlineform"].elements["b"].value;
-        if (bval == "") {
-          bval = 0;
+        a = a * points;
+        var xvals = 0;
+        for (i = 1; i <= points; i++) {
+          var nextval = document.forms["trendlineform"].elements["point" + i + "x"].value
+          if (nextval == "") {
+            nextval = 0;
+          }
+          xvals = xvals + parseFloat(nextval);
         }
-        var cval = document.forms["trendlineform"].elements["c"].value;
-        if (cval == "") {
-          cval = 0;
+        var yvals = 0;
+        for (i = 1; i <= points; i++) {
+          var nextval = document.forms["trendlineform"].elements["point" + i + "y"].value;
+          if (nextval == "") {
+            nextval = 0;
+          }
+          yvals = yvals + parseFloat(nextval);
         }
-        var t = Math.sqrt((bval * bval) - (4 * aval * cval));
-        var b = 2 * aval;
-        var bn = -bval;
-        var a1 = (bn + t)/b;
-        var a2 = (bn - t)/b;
-        if (isNaN(a1)) {
-          a1 = "None";
+        var b = xvals*yvals;
+        var c = 0;
+        for (i = 1; i <= points; i++) {
+          var nextval = document.forms["trendlineform"].elements["point" + i + "x"].value
+          if (nextval == "") {
+            nextval = 0;
+          }
+          var squarednext = nextval*nextval;
+          c = c + squarednext;
         }
-        if (isNaN(a2)) {
-          a2 = "None";
+        var c = c*points;
+        var d = xvals*xvals;
+        var slope = (parseFloat(a)-parseFloat(b))/(parseFloat(c)-parseFloat(d));
+        var f = slope*xvals;
+        var yint = (yvals-f)/points;
+        if (previousSlope != slope || previousYint != yint) {
+          if (yint > 0) {
+            if (isNaN(slope)) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
+            } else if (slope != 0) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
+            } else {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + yint + "</mn></math>"
+            }
+          } else if (yint < 0) {
+            if (isNaN(slope)) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+            } else if (slope != 0) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+            } else {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+            }
+          } else {
+            if (isNaN(slope)) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi><mo>=</mo><mn>" + parseFloat(xvals/points) + "</mn></math>"
+            } else if (slope != 0) {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi></math>"
+            } else {
+              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>0</mn></math>"
+            }
+          }
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
         }
-        var answer = a1 + ", " + a2;
-        document.getElementById('answer10').innerHTML = "Answers: " + answer;
+        previousSlope = slope;
+        previousYint = yint;
       }
     </script>
   </div>
