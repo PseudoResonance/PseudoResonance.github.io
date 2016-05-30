@@ -59,3 +59,21 @@ background:rgb(175,175,175);
 border:1px solid rgb(80,80,80);
 color:rgb(255,255,255);
 }
+
+a.trendlinePoints,a.trendlinePoints:visited {
+background:rgb(100,100,100);
+border:1px solid rgb(50,50,50);
+color:rgb(225,225,225);
+}
+
+a.trendlinePoints:hover {
+background:rgb(150,150,150);
+border:1px solid rgb(70,70,70);
+color:rgb(245,245,245);
+}
+
+a.trendlinePoints:active {
+background:rgb(175,175,175);
+border:1px solid rgb(80,80,80);
+color:rgb(255,255,255);
+}
