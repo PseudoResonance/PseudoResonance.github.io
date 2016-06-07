@@ -891,7 +891,8 @@
           answer = "None";
         } else {
           vy = (-1*((parseFloat(bval)*parseFloat(bval))/4))+parseFloat(cval);
-          answer = vy;
+          vx = ((-1*parseFloat(bval))/2*parseFloat(aval));
+          answer = "(" + vx + ", " + vy + ")";
         }
         document.getElementById('answer10').innerHTML = "Answer: " + answer;
       }
