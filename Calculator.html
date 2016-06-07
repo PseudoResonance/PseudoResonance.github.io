@@ -855,6 +855,51 @@
   <br>
   <br>
   <div id="form10">
+    <form action="" id="quadraticvertexform" onsubmit="return false;">
+      <fieldset>
+        <h4>Find the vertex of a quadratic equation.</h4>
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></label>
+        <input type="number" name="a" onclick="findquadv()" onkeyup="findquadv()" onkeydown="findquadv()" />&nbsp&nbsp&nbsp&nbsp
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></label>
+        <input type="number" name="b" onclick="findquadv()" onkeyup="findquadv()" onkeydown="findquadv()" />&nbsp&nbsp&nbsp&nbsp
+        <label><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math></label>
+        <input type="number" name="c" onclick="findquadv()" onkeyup="findquadv()" onkeydown="findquadv()" />
+        <h5><div id="answer10">Answer: None</div></h5>
+        <hr>
+        <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></h3>
+      </fieldset>
+    </form>
+    <script>
+    function decimalPlaces(num) {
+      var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {return 0;}
+      return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));}
+      function findquad() {
+        var aval = document.forms["quadraticvertexform"].elements["a"].value;
+        if (aval == "") {
+          aval = 0;
+        }
+        var bval = document.forms["quadraticvertexform"].elements["b"].value;
+        if (bval == "") {
+          bval = 0;
+        }
+        var cval = document.forms["quadraticvertexform"].elements["c"].value;
+        if (cval == "") {
+          cval = 0;
+        }
+        if (aval = 0) {
+          answer = "None";
+        } else {
+          vy = (-1*((parseFloat(bval)*parseFloat(bval))/4))+parseFloat(cval);
+          answer = vy;
+        }
+        document.getElementById('answer10').innerHTML = "Answer: " + answer;
+      }
+    </script>
+  </div>
+  <br>
+  <br>
+  <div id="form11">
     <form action="" id="trendlineform" onsubmit="return false;">
       <fieldset>
         <h4>Find the trendline of some points.</h4>
@@ -876,7 +921,7 @@
         </span>
         </span>
         <a id="trendlinePoints" class="trendlinePoints" href="#" onclick="addTrendlinePoint();">Add Point</a>
-        <h5><div id="answer10">Answers: None</div></h5>
+        <h5><div id="answer11">Answers: None</div></h5>
         <hr>
         <h3><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo></math> Number of Points</h3>
         <h3>Equation: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mfrac><mrow><mo>(</mo><mi>n</mi><mo>•</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>,</mo><msub><mi>y</mi><mi>1</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>2</mi></msub><mo>,</mo><msub><mi>y</mi><mi>2</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>}</mo><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mrow><mo>(</mo><mo>(</mo><msup><mrow><msub><mi>x</mi><mi>1</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>2</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow><mn>2</mn></msup><mo>)</mo><mo>-</mo><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>)</mo></mrow></mfrac><mi>x</mi><mo>+</mo><mfrac><mrow><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><mfrac><mrow><mo>(</mo><mi>n</mi><mo>•</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>,</mo><msub><mi>y</mi><mi>1</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>2</mi></msub><mo>,</mo><msub><mi>y</mi><mi>2</mi></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>}</mo><mo>)</mo><mo>-</mo><mo>(</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>y</mi><mi>1</mi></msub><mo>+</mo><msub><mi>y</mi><mi>2</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mrow><mo>(</mo><mo>(</mo><msup><mrow><msub><mi>x</mi><mi>1</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>2</mi></msub></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow><mn>2</mn></msup><mo>)</mo><mo>-</mo><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>)</mo></mrow></mfrac><mo>)</mo><mo>•</mo><mo>(</mo><msub><mi>x</mi><mi>1</mi></msub><mo>+</mo><msub><mi>x</mi><mi>2</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo>)</mo></mrow><mi>n</mi></mfrac></math></h3>
@@ -995,27 +1040,27 @@
         if (previousSlope != slope || previousYint != yint) {
           if (yint > 0) {
             if (isNaN(slope)) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
             } else if (slope != 0) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>+</mo><mn>" + yint + "</mn></math>"
             } else {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + yint + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + yint + "</mn></math>"
             }
           } else if (yint < 0) {
             if (isNaN(slope)) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>Undefined</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
             } else if (slope != 0) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
             } else {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mo>-</mo><mn>" + Math.abs(yint) + "</mn></math>"
             }
           } else {
             if (isNaN(slope)) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi><mo>=</mo><mn>" + parseFloat(xvals/points) + "</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi><mo>=</mo><mn>" + parseFloat(xvals/points) + "</mn></math>"
             } else if (slope != 0) {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>" + parseFloat(slope) + "</mn><mi>x</mi></math>"
             } else {
-              document.getElementById('answer10').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>0</mn></math>"
+              document.getElementById('answer11').innerHTML = "Answer Equation: <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi><mo>=</mo><mn>0</mn></math>"
             }
           }
           MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
